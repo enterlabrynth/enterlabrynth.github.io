@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Competition &amp; Mutualism · EnterLabrynth</title>
+<meta name="description" content="Flow charts for competition and mutualism: exclusion vs. coexistence, and when a trade tips into parasitism.">
+<meta property="og:title" content="Competition &amp; Mutualism · EnterLabrynth">
+<meta property="og:description" content="Flow charts for competition and mutualism: exclusion vs. coexistence, and when a trade tips into parasitism.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&amp;family=Atkinson+Hyperlegible:wght@400;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap">
+<style>
+body{margin:0;background:#070B14;color:#E8EEF8;font-family:'Atkinson Hyperlegible',system-ui,-apple-system,'Segoe UI',sans-serif}
+a{color:#E8EEF8}a:hover{color:#FFFFFF}
+a:focus-visible,summary:focus-visible{outline:2px solid #39E58C;outline-offset:2px}
+</style>
+<style>html{height:100%;background:#070B14}body{min-height:100%}#dc-root{min-height:100vh}</style>
+</head>
+<body>
+<div style="width: 100%; min-height: 100%; background: #070B14; color: #E8EEF8; font-family: 'Atkinson Hyperlegible', system-ui, sans-serif">
+<div style="max-width: 1180px; margin: 0 auto; padding-inline: 24px; box-sizing: border-box">
+
+<header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-block: 22px">
+<a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #E8EEF8">
+<span style="width: 30px; height: 30px; border-radius: 50%; background: radial-gradient(circle at 50% 50%, #6E9BFF 0 28%, rgba(57,229,140,0.9) 30% 62%, rgba(57,229,140,0) 72%); box-shadow: 0 0 18px rgba(57,229,140,0.55)"></span>
+<span style="display: flex; flex-direction: column; gap: 3px; color: #e8eef8"><span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 20px; line-height: 1.1; letter-spacing: -0.01em">Enter<span style="color: #39E58C">Lab</span>rynth</span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.16em; color: #B7C3D8">GET BENCH READY</span><span style="font-size: 10.5px; line-height: 1.2; color: #FF6B8F">created by Isabel Kaur Saini</span></span>
+</a>
+<nav style="display: flex; flex-wrap: wrap; gap: 4px; font-size: 15px">
+<a href="index.html" style="text-decoration: none; padding: 12px">Biology</a>
+<a href="index.html" style="text-decoration: none; padding: 12px; color: #93A2BC">Chemistry</a>
+<a href="index.html" style="text-decoration: none; padding: 12px">Podcast</a>
+<a href="index.html" style="text-decoration: none; padding: 12px">About</a>
+</nav>
+</header>
+
+<section style="display: flex; flex-direction: column; gap: 16px; padding-block: 24px 24px">
+<nav aria-label="Breadcrumb" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 14px; color: #93A2BC">
+<a href="index.html" style="color: #93A2BC">Biology</a><span aria-hidden="true">/</span>
+<a href="ecology-evolution.html" style="color: #93A2BC">Ecology &amp; Evolution</a><span aria-hidden="true">/</span>
+<a href="communities-ecosystems-climate.html" style="color: #93A2BC">Unit 2</a><span aria-hidden="true">/</span>
+<span style="color: #E8EEF8">Module 2.1</span>
+</nav>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center">
+<span style="display: inline-flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; color: #39E58C"><span style="width: 9px; height: 9px; border-radius: 50%; background: #39E58C; box-shadow: 0 0 10px #39E58C"></span>CH2 · UNIT 02 · MODULE 2.1</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; color: #93A2BC; padding: 4px 9px; border: 1px solid #22304A; border-radius: 999px">PAIRS WITH BIO 171 · LECTURE 7</span>
+</div>
+<h1 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: clamp(30px, 7vw, 56px); line-height: 1.04; letter-spacing: -0.035em; text-wrap: balance; overflow-wrap: anywhere">Competition <span style="color: #39E58C; text-shadow: 0 0 28px rgba(57,229,140,0.4)">&amp; Mutualism</span></h1>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #B7C3D8; max-width: 42em">Two ways species affect each other. Competition lowers fitness for both; mutualism raises it for both. Each one has its own flow chart below.</p>
+</section>
+
+<nav aria-label="On this page" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 8px 28px; padding: 20px 24px 12px; margin-bottom: 28px; border-radius: 16px; background: #0B1120; border: 1px solid #22304A">
+<div style="display: flex; flex-direction: column; min-width: 0">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #FF8FAA; padding-bottom: 10px">ON THIS PAGE · PART 1</span>
+<a href="#competition" style="display: flex; align-items: center; min-height: 44px; border-top: 1px solid #22304A; text-decoration: none; font-weight: 700; font-size: 17px">Competition</a>
+<a href="#comp-a" style="display: flex; align-items: center; min-height: 44px; border-top: 1px solid #22304A; text-decoration: none; font-size: 15px; color: #C9D3E4">Track A · Complete niche overlap</a>
+<a href="#comp-b" style="display: flex; align-items: center; min-height: 44px; border-top: 1px solid #22304A; text-decoration: none; font-size: 15px; color: #C9D3E4">Track B · Partial niche overlap</a>
+<a href="#comp-vocab" style="display: flex; align-items: center; min-height: 44px; border-top: 1px solid #22304A; text-decoration: none; font-size: 15px; color: #C9D3E4">Vocab</a>
+</div>
+<div style="display: flex; flex-direction: column; min-width: 0">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #39E58C; padding-bottom: 10px">ON THIS PAGE · PART 2</span>
+<a href="#mutualism" style="display: flex; align-items: center; min-height: 44px; border-top: 1px solid #22304A; text-decoration: none; font-weight: 700; font-size: 17px">Mutualism</a>
+<a href="#mut-a" style="display: flex; align-items: center; min-height: 44px; border-top: 1px solid #22304A; text-decoration: none; font-size: 15px; color: #C9D3E4">Track A · The trade holds</a>
+<a href="#mut-b" style="display: flex; align-items: center; min-height: 44px; border-top: 1px solid #22304A; text-decoration: none; font-size: 15px; color: #C9D3E4">Track B · The trade tips over</a>
+<a href="#mut-lock" style="display: flex; align-items: center; min-height: 44px; border-top: 1px solid #22304A; text-decoration: none; font-size: 15px; color: #C9D3E4">Lock it in</a>
+<a href="#mut-vocab" style="display: flex; align-items: center; min-height: 44px; border-top: 1px solid #22304A; text-decoration: none; font-size: 15px; color: #C9D3E4">Vocab</a>
+</div>
+</nav>
+
+<section id="competition" style="display: flex; flex-direction: column; gap: 12px; padding-block: 8px 20px; scroll-margin-top: 16px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.14em; color: #FF8FAA">PART 1</span>
+<h2 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: clamp(28px, 5vw, 40px); line-height: 1.1; letter-spacing: -0.03em">Competition</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #B7C3D8; max-width: 42em">Two questions decide how competition ends. How much do the two niches overlap? And is the competition even? Follow the arrows to see when one species is excluded and when both coexist.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; color: #C9D3E4">
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 12px; height: 12px; border-radius: 50%; background: #6E9BFF"></span>Species 1 is the strong competitor in every graph</span>
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 12px; height: 12px; border-radius: 50%; background: #FFC23D"></span>Species 2 is the weak competitor</span>
+</div>
+</section>
+
+<div style="display: flex; flex-direction: column; gap: 14px; padding-bottom: 40px">
+
+<section style="display: flex; flex-direction: column; gap: 12px; padding: 24px 26px; border-radius: 18px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #93A2BC">START · COMPETITION IS A −/− INTERACTION</span>
+<h2 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 24px; line-height: 1.2; letter-spacing: -0.02em">Two species need the same limited resource</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #C9D3E4; max-width: 46em">Both species lose fitness. It doesn't take fighting: using up a shared resource is enough.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 14px">
+<span style="padding: 6px 12px; border-radius: 999px; border: 1px solid #22304A; color: #C9D3E4"><b>Intraspecific</b> · within one species</span>
+<span style="padding: 6px 12px; border-radius: 999px; border: 1px solid #22304A; color: #C9D3E4"><b>Interspecific</b> · between two species</span>
+</div>
+</section>
+
+<div aria-hidden="true" style="display: flex; justify-content: center"><svg width="28" height="36" viewBox="0 0 28 36" fill="none" stroke="#5A6C8E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v28"></path><path d="M5 22l9 9 9-9"></path></svg></div>
+
+<section style="display: flex; flex-direction: column; gap: 14px; padding: 24px 26px; border-radius: 18px; background: #0E1524; border: 1px solid #3A4A68">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #39E58C">QUESTION 1</span>
+<h2 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 24px; line-height: 1.2; letter-spacing: -0.02em">How much do the two niches overlap?</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #C9D3E4; max-width: 46em">The more two niches overlap, the stronger the competition. In nature, overlap is usually partial.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="#comp-a" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 20px; border-radius: 10px; border: 1.5px solid #FF6B8F; color: #FFB3C4; text-decoration: none; font-weight: 700; font-size: 15px">Completely: go to Track A
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M6 13l6 6 6-6"></path></svg></a>
+<a href="#comp-b" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 20px; border-radius: 10px; border: 1.5px solid #39E58C; color: #8FF2C0; text-decoration: none; font-weight: 700; font-size: 15px">Partially: go to Track B
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M6 13l6 6 6-6"></path></svg></a>
+</div>
+</section>
+
+<div aria-hidden="true" style="display: flex; justify-content: center"><svg width="28" height="36" viewBox="0 0 28 36" fill="none" stroke="#5A6C8E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v28"></path><path d="M5 22l9 9 9-9"></path></svg></div>
+
+<section id="comp-a" style="display: flex; flex-direction: column; gap: 18px; padding: 26px; border-radius: 22px; background: #0B1120; border: 1px solid #22304A; scroll-margin-top: 16px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #FF8FAA">TRACK A</span>
+<h2 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 30px; line-height: 1.15; letter-spacing: -0.03em">Complete niche overlap</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #C9D3E4; max-width: 46em">The two species need exactly the same resources. Question 2: is the competition even?</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 18px; align-items: start">
+
+<div style="display: flex; flex-direction: column; gap: 12px; min-width: 0">
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 14px 18px; border-radius: 12px; background: rgba(255,107,143,0.08); border: 1px solid rgba(255,107,143,0.4)">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; color: #FF8FAA">ASYMMETRIC COMPETITION</span>
+<span style="font-size: 15px; line-height: 1.5; color: #C9D3E4">One species loses much more fitness than the other. This is the more common case in nature.</span>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 12px; min-width: 0; padding: 20px; border-radius: 16px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #93A2BC">GRAPH 1 · FITNESS, ALONE VS. TOGETHER</span>
+<h3 style="margin: 0; font-weight: 700; font-size: 19px; line-height: 1.3">Different fitness levels</h3>
+<div style="position: relative">
+<svg viewBox="0 0 400 230" role="img" aria-label="Fitness graph for asymmetric competition. Both species have high fitness alone. Together, species 1 drops a little and species 2 drops much further." style="display: block; width: 100%; height: auto">
+<defs>
+<marker id="cmp1-b" viewBox="0 0 8 8" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#6E9BFF"></path></marker>
+<marker id="cmp1-y" viewBox="0 0 8 8" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#FFC23D"></path></marker>
+</defs>
+<rect width="400" height="230" rx="10" fill="#0A101D"></rect>
+<path d="M30 14 L30 195 L388 195" fill="none" stroke="#5A6C8E" stroke-width="1.5"></path>
+<path d="M207 28 L207 195" fill="none" stroke="#5A6C8E" stroke-width="1.5" stroke-dasharray="4 5"></path>
+<path d="M96.5 57.8 L197.7 96.4" fill="none" stroke="#6E9BFF" stroke-width="2.5" stroke-linecap="round" marker-end="url(#cmp1-b)"></path>
+<path d="M320 60.3 L214.5 153.4" fill="none" stroke="#FFC23D" stroke-width="2.5" stroke-linecap="round" marker-end="url(#cmp1-y)"></path>
+<circle cx="89" cy="55" r="6" fill="#6E9BFF"></circle>
+<circle cx="326" cy="55" r="6" fill="#FFC23D"></circle>
+<circle cx="207" cy="100" r="6" fill="#6E9BFF"></circle>
+<circle cx="207" cy="160" r="6" fill="#FFC23D"></circle>
+</svg>
+<span style="position: absolute; left: 9.5%; top: 4%; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.1em; color: #93A2BC">↑ FITNESS</span>
+<span style="position: absolute; right: 51%; top: 45%; font-size: 12px; line-height: 16px; font-weight: 700; color: #E8EEF8; text-align: right; white-space: nowrap">Higher fitness</span>
+<span style="position: absolute; right: 51%; top: 66%; font-size: 12px; line-height: 16px; font-weight: 700; color: #E8EEF8; text-align: right; white-space: nowrap">Lower fitness</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding-left: 7.5%; padding-right: 3.75%; font-size: 12px; line-height: 1.3; color: #93A2BC; text-align: center">
+<span>Species 1 alone</span><span>1 + 2 together</span><span>Species 2 alone</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9D3E4">Both drop, because competition is −/−. Species 2 drops much further, so Species 1 is the stronger competitor.</p>
+</div>
+
+<div aria-hidden="true" style="display: flex; justify-content: center"><svg width="28" height="36" viewBox="0 0 28 36" fill="none" stroke="#5A6C8E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v28"></path><path d="M5 22l9 9 9-9"></path></svg></div>
+
+<div style="display: flex; flex-direction: column; gap: 12px; min-width: 0; padding: 20px; border-radius: 16px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #93A2BC">GRAPH 2 · NICHE OVERLAP</span>
+<h3 style="margin: 0; font-weight: 700; font-size: 19px; line-height: 1.3">The weak competitor is drowned out</h3>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.1em; color: #93A2BC">↑ INDIVIDUALS USING THE RESOURCE</span>
+<svg viewBox="0 0 400 230" role="img" aria-label="Niche graph with complete overlap. Species 2's curve sits entirely inside species 1's curve and shrinks toward zero." style="display: block; width: 100%; height: auto">
+<defs>
+<marker id="cmp2-y" viewBox="0 0 8 8" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#FFC23D"></path></marker>
+</defs>
+<rect width="400" height="230" rx="10" fill="#0A101D"></rect>
+<path d="M30 195 L30 193.3 L36 192.7 L42 191.9 L48 190.9 L54 189.6 L60 188 L66 185.9 L72 183.5 L78 180.4 L84 176.8 L90 172.6 L96 167.6 L102 161.9 L108 155.5 L114 148.3 L120 140.3 L126 131.7 L132 122.5 L138 112.9 L144 103 L150 92.9 L156 83 L162 73.4 L168 64.5 L174 56.3 L180 49.2 L186 43.4 L192 39 L198 36.2 L204 35 L210 35.6 L216 37.9 L222 41.7 L228 47.1 L234 53.8 L240 61.6 L246 70.4 L252 79.8 L258 89.6 L264 99.6 L270 109.6 L276 119.4 L282 128.7 L288 137.5 L294 145.7 L300 153.2 L306 159.9 L312 165.8 L318 171 L324 175.5 L330 179.3 L336 182.5 L342 185.2 L348 187.3 L354 189.1 L360 190.5 L366 191.6 L372 192.5 L378 193.1 L384 193.6 L384 195 Z" fill="rgba(110,155,255,0.28)" stroke="#6E9BFF" stroke-width="2.5" stroke-linejoin="round"></path>
+<path d="M30 195 L30 194.7 L36 194.5 L42 194.3 L48 193.9 L54 193.5 L60 192.8 L66 191.9 L72 190.8 L78 189.2 L84 187.2 L90 184.6 L96 181.4 L102 177.5 L108 172.8 L114 167.1 L120 160.6 L126 153.1 L132 144.7 L138 135.5 L144 125.6 L150 115.3 L156 104.7 L162 94.1 L168 84 L174 74.5 L180 66.2 L186 59.2 L192 53.9 L198 50.4 L204 49 L210 49.7 L216 52.5 L222 57.2 L228 63.7 L234 71.6 L240 80.7 L246 90.7 L252 101.1 L258 111.8 L264 122.2 L270 132.3 L276 141.7 L282 150.4 L288 158.2 L294 165.1 L300 171 L306 176 L312 180.2 L318 183.6 L324 186.4 L330 188.6 L336 190.3 L342 191.6 L348 192.6 L354 193.3 L360 193.8 L366 194.2 L372 194.4 L378 194.6 L384 194.8 L384 195 Z" fill="rgba(255,194,61,0.14)" stroke="#FFC23D" stroke-width="2" stroke-linejoin="round" opacity="0.75"></path>
+<path d="M96 195 L96 192.2 L102 191.4 L108 190.4 L114 189.3 L120 187.9 L126 186.4 L132 184.7 L138 182.8 L144 180.7 L150 178.6 L156 176.4 L162 174.3 L168 172.2 L174 170.2 L180 168.5 L186 167.1 L192 166 L198 165.3 L204 165 L210 165.1 L216 165.7 L222 166.7 L228 168 L234 169.6 L240 171.5 L246 173.6 L252 175.7 L258 177.9 L264 180 L270 182.1 L276 184.1 L282 185.8 L288 187.4 L294 188.8 L300 190.1 L306 191.1 L312 192 L312 195 Z" fill="rgba(255,194,61,0.3)" stroke="#FFC23D" stroke-width="2" stroke-dasharray="5 4" stroke-linejoin="round"></path>
+<path d="M205 66 L205 152" fill="none" stroke="#FFC23D" stroke-width="2.5" stroke-linecap="round" marker-end="url(#cmp2-y)"></path>
+<path d="M30 14 L30 195 L388 195" fill="none" stroke="#5A6C8E" stroke-width="1.5"></path>
+</svg>
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.1em; color: #93A2BC; text-align: center">NICHE RANGE →</div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: #C9D3E4">
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 12px; height: 12px; border-radius: 50%; background: #6E9BFF"></span>Species 1 · strong competitor</span>
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 12px; height: 12px; border-radius: 50%; background: #FFC23D"></span>Species 2 · weak, shrinking to zero</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9D3E4">Species 2's whole niche sits inside Species 1's, so there is nothing it can use that Species 1 doesn't take first.</p>
+</div>
+
+<div aria-hidden="true" style="display: flex; justify-content: center"><svg width="28" height="36" viewBox="0 0 28 36" fill="none" stroke="#5A6C8E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v28"></path><path d="M5 22l9 9 9-9"></path></svg></div>
+
+<div style="display: flex; flex-direction: column; gap: 10px; min-width: 0; padding: 22px; border-radius: 16px; background: #0E1524; border: 1px solid rgba(255,107,143,0.5); box-shadow: inset 0 1px 0 rgba(255,107,143,0.5), 0 -20px 60px -40px rgba(255,107,143,0.6)">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #FF8FAA">RESULT</span>
+<h3 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 22px; line-height: 1.2; letter-spacing: -0.02em">Competitive exclusion</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9D3E4">The stronger competitor drives the weaker one to local extinction. This is the <b>competitive exclusion principle</b>: two species with identical niches cannot coexist.</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.55; color: #93A2BC">Classic example: <i>Paramecium aurelia</i> and <i>P. caudatum</i> grown in one flask. <i>P. caudatum</i> dies out, and even the winner grows to a lower density than it does alone.</p>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 12px; min-width: 0">
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 14px 18px; border-radius: 12px; background: rgba(177,140,255,0.08); border: 1px solid rgba(177,140,255,0.4)">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; color: #C7AEFF">SYMMETRIC COMPETITION</span>
+<span style="font-size: 15px; line-height: 1.5; color: #C9D3E4">Both species lose about the same amount of fitness. This is the less common case in nature.</span>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 12px; min-width: 0; padding: 20px; border-radius: 16px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #93A2BC">GRAPH 1 · FITNESS, ALONE VS. TOGETHER</span>
+<h3 style="margin: 0; font-weight: 700; font-size: 19px; line-height: 1.3">Same fitness level</h3>
+<div style="position: relative">
+<svg viewBox="0 0 400 230" role="img" aria-label="Fitness graph for symmetric competition. Both species have high fitness alone and drop to the same lower fitness together." style="display: block; width: 100%; height: auto">
+<defs>
+<marker id="cmp3-b" viewBox="0 0 8 8" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#6E9BFF"></path></marker>
+<marker id="cmp3-y" viewBox="0 0 8 8" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#FFC23D"></path></marker>
+</defs>
+<rect width="400" height="230" rx="10" fill="#0A101D"></rect>
+<path d="M30 14 L30 195 L388 195" fill="none" stroke="#5A6C8E" stroke-width="1.5"></path>
+<path d="M207 28 L207 195" fill="none" stroke="#5A6C8E" stroke-width="1.5" stroke-dasharray="4 5"></path>
+<path d="M95.7 59.4 L191.8 122" fill="none" stroke="#6E9BFF" stroke-width="2.5" stroke-linecap="round" marker-end="url(#cmp3-b)"></path>
+<path d="M319.3 59.3 L222.2 122" fill="none" stroke="#FFC23D" stroke-width="2.5" stroke-linecap="round" marker-end="url(#cmp3-y)"></path>
+<circle cx="89" cy="55" r="6" fill="#6E9BFF"></circle>
+<circle cx="326" cy="55" r="6" fill="#FFC23D"></circle>
+<circle cx="200" cy="128" r="6" fill="#6E9BFF"></circle>
+<circle cx="214" cy="128" r="6" fill="#FFC23D"></circle>
+</svg>
+<span style="position: absolute; left: 9.5%; top: 4%; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.1em; color: #93A2BC">↑ FITNESS</span>
+<span style="position: absolute; left: 51.75%; top: 62%; transform: translateX(-50%); padding: 0 6px; background: #0A101D; font-size: 12px; line-height: 16px; font-weight: 700; color: #E8EEF8; white-space: nowrap">Same fitness</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding-left: 7.5%; padding-right: 3.75%; font-size: 12px; line-height: 1.3; color: #93A2BC; text-align: center">
+<span>Species 1 alone</span><span>1 + 2 together</span><span>Species 2 alone</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9D3E4">Both drop by the same amount. Neither species is the stronger competitor.</p>
+</div>
+
+<div aria-hidden="true" style="display: flex; justify-content: center"><svg width="28" height="36" viewBox="0 0 28 36" fill="none" stroke="#5A6C8E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v28"></path><path d="M5 22l9 9 9-9"></path></svg></div>
+
+<div style="display: flex; flex-direction: column; gap: 12px; min-width: 0; padding: 20px; border-radius: 16px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #93A2BC">GRAPH 2 · NICHE OVERLAP</span>
+<h3 style="margin: 0; font-weight: 700; font-size: 19px; line-height: 1.3">Both shrink by the same amount</h3>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.1em; color: #93A2BC">↑ INDIVIDUALS USING THE RESOURCE</span>
+<svg viewBox="0 0 400 230" role="img" aria-label="Niche graph with complete overlap and symmetric competition. Both species' curves are equally lower than the dashed curve for either species alone." style="display: block; width: 100%; height: auto">
+<defs>
+<marker id="cmp4-g" viewBox="0 0 8 8" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#B7C3D8"></path></marker>
+</defs>
+<rect width="400" height="230" rx="10" fill="#0A101D"></rect>
+<path d="M30 193.3 L36 192.7 L42 191.9 L48 190.9 L54 189.6 L60 188 L66 185.9 L72 183.5 L78 180.4 L84 176.8 L90 172.6 L96 167.6 L102 161.9 L108 155.5 L114 148.3 L120 140.3 L126 131.7 L132 122.5 L138 112.9 L144 103 L150 92.9 L156 83 L162 73.4 L168 64.5 L174 56.3 L180 49.2 L186 43.4 L192 39 L198 36.2 L204 35 L210 35.6 L216 37.9 L222 41.7 L228 47.1 L234 53.8 L240 61.6 L246 70.4 L252 79.8 L258 89.6 L264 99.6 L270 109.6 L276 119.4 L282 128.7 L288 137.5 L294 145.7 L300 153.2 L306 159.9 L312 165.8 L318 171 L324 175.5 L330 179.3 L336 182.5 L342 185.2 L348 187.3 L354 189.1 L360 190.5 L366 191.6 L372 192.5 L378 193.1 L384 193.6" fill="none" stroke="#93A2BC" stroke-width="1.5" stroke-dasharray="5 5"></path>
+<path d="M30 195 L30 193.6 L36 193.1 L42 192.4 L48 191.6 L54 190.6 L60 189.3 L66 187.8 L72 185.9 L78 183.7 L84 181 L90 177.9 L96 174.3 L102 170.3 L108 165.8 L114 160.8 L120 155.5 L126 149.7 L132 143.7 L138 137.5 L144 131.2 L150 125 L156 119 L162 113.4 L168 108.3 L174 103.9 L180 100.2 L186 97.5 L192 95.7 L198 95 L204 95.4 L210 96.8 L216 99.2 L222 102.6 L228 106.8 L234 111.6 L240 117.1 L246 123 L252 129.1 L258 135.4 L264 141.6 L270 147.7 L276 153.6 L282 159.1 L288 164.2 L294 168.9 L300 173 L306 176.8 L312 180 L318 182.8 L324 185.2 L330 187.2 L336 188.9 L342 190.2 L348 191.3 L354 192.2 L360 192.9 L366 193.4 L372 193.8 L378 194.1 L384 194.4 L384 195 Z" fill="rgba(110,155,255,0.25)" stroke="#6E9BFF" stroke-width="2.5" stroke-linejoin="round"></path>
+<path d="M30 195 L30 194.2 L36 193.9 L42 193.6 L48 193.1 L54 192.4 L60 191.6 L66 190.6 L72 189.3 L78 187.8 L84 185.9 L90 183.7 L96 181 L102 177.9 L108 174.3 L114 170.3 L120 165.8 L126 160.8 L132 155.5 L138 149.7 L144 143.7 L150 137.5 L156 131.2 L162 125 L168 119 L174 113.4 L180 108.3 L186 103.9 L192 100.2 L198 97.5 L204 95.7 L210 95 L216 95.4 L222 96.8 L228 99.2 L234 102.6 L240 106.8 L246 111.6 L252 117.1 L258 123 L264 129.1 L270 135.4 L276 141.6 L282 147.7 L288 153.6 L294 159.1 L300 164.2 L306 168.9 L312 173 L318 176.8 L324 180 L330 182.8 L336 185.2 L342 187.2 L348 188.9 L354 190.2 L360 191.3 L366 192.2 L372 192.9 L378 193.4 L384 193.8 L384 195 Z" fill="rgba(255,194,61,0.2)" stroke="#FFC23D" stroke-width="2.5" stroke-linejoin="round"></path>
+<path d="M205 44 L205 84" fill="none" stroke="#B7C3D8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#cmp4-g)"></path>
+<path d="M30 14 L30 195 L388 195" fill="none" stroke="#5A6C8E" stroke-width="1.5"></path>
+</svg>
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.1em; color: #93A2BC; text-align: center">NICHE RANGE →</div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: #C9D3E4">
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 12px; height: 12px; border-radius: 50%; background: #6E9BFF"></span>Species 1</span>
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 12px; height: 12px; border-radius: 50%; background: #FFC23D"></span>Species 2</span>
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 16px; height: 0; border-top: 2px dashed #93A2BC"></span>Either species alone</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9D3E4">The two niches are the same, and each population ends up equally smaller than it would be alone.</p>
+</div>
+
+<div aria-hidden="true" style="display: flex; justify-content: center"><svg width="28" height="36" viewBox="0 0 28 36" fill="none" stroke="#5A6C8E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v28"></path><path d="M5 22l9 9 9-9"></path></svg></div>
+
+<div style="display: flex; flex-direction: column; gap: 10px; min-width: 0; padding: 22px; border-radius: 16px; background: #0E1524; border: 1px solid rgba(177,140,255,0.5); box-shadow: inset 0 1px 0 rgba(177,140,255,0.5), 0 -20px 60px -40px rgba(177,140,255,0.6)">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #C7AEFF">RESULT</span>
+<h3 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 22px; line-height: 1.2; letter-spacing: -0.02em">Both lose, no clear winner</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9D3E4">Each species is held to the same lowered fitness. Competitive exclusion needs asymmetric competition, so this branch does not end with one species driving out the other.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="comp-b" style="display: flex; flex-direction: column; gap: 18px; padding: 26px; border-radius: 22px; background: #0B1120; border: 1px solid #22304A; scroll-margin-top: 16px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #39E58C">TRACK B</span>
+<h2 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 30px; line-height: 1.15; letter-spacing: -0.03em">Partial niche overlap</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #C9D3E4; max-width: 46em">The two species share some resources and each has some to itself. This is what we usually see in nature.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 18px; align-items: start">
+
+<div style="display: flex; flex-direction: column; gap: 12px; min-width: 0; padding: 20px; border-radius: 16px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #93A2BC">GRAPH 1 · BEFORE COMPETITION PLAYS OUT</span>
+<h3 style="margin: 0; font-weight: 700; font-size: 19px; line-height: 1.3">Two niches, one shared zone</h3>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.1em; color: #93A2BC">↑ INDIVIDUALS USING THE RESOURCE</span>
+<div style="position: relative">
+<svg viewBox="0 0 400 230" role="img" aria-label="Niche graph with partial overlap. Species 1's curve and species 2's curve overlap in the middle; the overlap is highlighted." style="display: block; width: 100%; height: auto">
+<rect width="400" height="230" rx="10" fill="#0A101D"></rect>
+<path d="M30 195 L30 190.5 L36 187.9 L42 184.2 L48 179.1 L54 172.2 L60 163.4 L66 152.5 L72 139.6 L78 125.1 L84 109.4 L90 93.4 L96 78.1 L102 64.6 L108 54.1 L114 47.3 L120 45 L126 47.3 L132 54.1 L138 64.6 L144 78.1 L150 93.4 L156 109.4 L162 125.1 L168 139.6 L174 152.5 L180 163.4 L186 172.2 L192 179.1 L198 184.2 L204 187.9 L210 190.5 L216 192.2 L222 193.3 L228 194 L228 195 Z" fill="rgba(110,155,255,0.25)" stroke="#6E9BFF" stroke-width="2.5" stroke-linejoin="round"></path>
+<path d="M54 195 L54 193.4 L60 192.8 L66 191.9 L72 190.6 L78 189 L84 187 L90 184.3 L96 181.1 L102 177 L108 172.2 L114 166.4 L120 159.6 L126 151.9 L132 143.3 L138 133.9 L144 123.7 L150 113.1 L156 102.2 L162 91.4 L168 80.9 L174 71.2 L180 62.6 L186 55.4 L192 50 L198 46.5 L204 45 L210 45.7 L216 48.6 L222 53.4 L228 60.1 L234 68.2 L240 77.6 L246 87.8 L252 98.6 L258 109.5 L264 120.2 L270 130.6 L276 140.3 L282 149.2 L288 157.2 L294 164.2 L300 170.3 L306 175.5 L312 179.8 L318 183.3 L324 186.2 L330 188.4 L336 190.2 L342 191.5 L348 192.5 L354 193.2 L360 193.8 L366 194.2 L372 194.4 L378 194.6 L384 194.8 L384 195 Z" fill="rgba(255,194,61,0.2)" stroke="#FFC23D" stroke-width="2.5" stroke-linejoin="round"></path>
+<path d="M54 195 L54 193.4 L60 192.8 L66 191.9 L72 190.6 L78 189 L84 187 L90 184.3 L96 181.1 L102 177 L108 172.2 L114 166.4 L120 159.6 L126 151.9 L132 143.3 L138 133.9 L144 123.7 L150 113.1 L156 109.4 L162 125.1 L168 139.6 L174 152.5 L180 163.4 L186 172.2 L192 179.1 L198 184.2 L204 187.9 L210 190.5 L216 192.2 L222 193.3 L228 194 L228 195 Z" fill="rgba(255,107,143,0.5)"></path>
+<path d="M30 14 L30 195 L388 195" fill="none" stroke="#5A6C8E" stroke-width="1.5"></path>
+</svg>
+<span style="position: absolute; left: 38.5%; top: 68%; transform: translateX(-50%); font-size: 12px; line-height: 16px; font-weight: 700; color: #FFFFFF; white-space: nowrap">overlap</span>
+</div>
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.1em; color: #93A2BC; text-align: center">NICHE RANGE →</div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: #C9D3E4">
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 12px; height: 12px; border-radius: 50%; background: #6E9BFF"></span>Species 1 · strong competitor</span>
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 12px; height: 12px; border-radius: 50%; background: #FFC23D"></span>Species 2 · weak competitor</span>
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 12px; height: 12px; border-radius: 3px; background: #FF6B8F"></span>Overlap, where they compete</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9D3E4">Each curve is that species' <b>fundamental niche</b>: everything it could use if the other species weren't there. They compete only in the overlap.</p>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 12px; min-width: 0; padding: 20px; border-radius: 16px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #93A2BC">GRAPH 2 · AFTER COMPETITION PLAYS OUT</span>
+<h3 style="margin: 0; font-weight: 700; font-size: 19px; line-height: 1.3">The niches separate</h3>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.1em; color: #93A2BC">↑ INDIVIDUALS USING THE RESOURCE</span>
+<div style="position: relative">
+<svg viewBox="0 0 400 230" role="img" aria-label="Niche graph after competition. Species 1's curve is unchanged. Species 2's full curve is its fundamental niche; the dashed, filled part outside the overlap is its realized niche." style="display: block; width: 100%; height: auto">
+<rect width="400" height="230" rx="10" fill="#0A101D"></rect>
+<path d="M30 195 L30 190.5 L36 187.9 L42 184.2 L48 179.1 L54 172.2 L60 163.4 L66 152.5 L72 139.6 L78 125.1 L84 109.4 L90 93.4 L96 78.1 L102 64.6 L108 54.1 L114 47.3 L120 45 L126 47.3 L132 54.1 L138 64.6 L144 78.1 L150 93.4 L156 109.4 L162 125.1 L168 139.6 L174 152.5 L180 163.4 L186 172.2 L192 179.1 L198 184.2 L204 187.9 L210 190.5 L216 192.2 L222 193.3 L228 194 L228 195 Z" fill="rgba(110,155,255,0.25)" stroke="#6E9BFF" stroke-width="2.5" stroke-linejoin="round"></path>
+<path d="M54 193.4 L60 192.8 L66 191.9 L72 190.6 L78 189 L84 187 L90 184.3 L96 181.1 L102 177 L108 172.2 L114 166.4 L120 159.6 L126 151.9 L132 143.3 L138 133.9 L144 123.7 L150 113.1 L156 102.2 L162 91.4 L168 80.9 L174 71.2 L180 62.6 L186 55.4 L192 50 L198 46.5 L204 45 L210 45.7 L216 48.6 L222 53.4 L228 60.1 L234 68.2 L240 77.6 L246 87.8 L252 98.6 L258 109.5 L264 120.2 L270 130.6 L276 140.3 L282 149.2 L288 157.2 L294 164.2 L300 170.3 L306 175.5 L312 179.8 L318 183.3 L324 186.2 L330 188.4 L336 190.2 L342 191.5 L348 192.5 L354 193.2 L360 193.8 L366 194.2 L372 194.4 L378 194.6 L384 194.8" fill="none" stroke="#FFC23D" stroke-width="1.5" stroke-linejoin="round"></path>
+<path d="M184 195 L190 180.5 L196 144.6 L202 100.9 L208 64.9 L214 51.8 L220 55.9 L226 61.8 L232 69.2 L238 78 L244 87.7 L250 98 L256 108.5 L262 119 L268 129.2 L274 138.9 L280 147.8 L286 155.8 L292 163 L298 169.2 L304 174.5 L310 179 L316 182.6 L322 185.6 L328 187.9 L334 189.8 L340 191.2 L346 192.3 L352 193.1 L358 193.7 L364 194.1 L370 194.4 L376 194.6 L382 194.7 L382 195 Z" fill="rgba(255,194,61,0.32)" stroke="#FFC23D" stroke-width="2.5" stroke-dasharray="6 4" stroke-linejoin="round"></path>
+<path d="M266 31 L162 93" fill="none" stroke="#E8EEF8" stroke-width="1.5"></path>
+<circle cx="161" cy="93.5" r="3.5" fill="#E8EEF8"></circle>
+<path d="M266 79 L240 100" fill="none" stroke="#E8EEF8" stroke-width="1.5"></path>
+<circle cx="239" cy="101" r="3.5" fill="#E8EEF8"></circle>
+<path d="M30 14 L30 195 L388 195" fill="none" stroke="#5A6C8E" stroke-width="1.5"></path>
+</svg>
+<span style="position: absolute; left: 68%; top: 9%; font-size: 12px; line-height: 16px; font-weight: 700; color: #E8EEF8; white-space: nowrap">Fundamental niche</span>
+<span style="position: absolute; left: 68%; top: 30%; font-size: 12px; line-height: 16px; font-weight: 700; color: #E8EEF8; white-space: nowrap">Realized niche</span>
+</div>
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.1em; color: #93A2BC; text-align: center">NICHE RANGE →</div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: #C9D3E4">
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 12px; height: 12px; border-radius: 50%; background: #6E9BFF"></span>Species 1 · niche unchanged</span>
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 16px; height: 0; border-top: 2px solid #FFC23D"></span>Species 2 · fundamental (solid)</span>
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 16px; height: 0; border-top: 2px dashed #FFC23D"></span>Species 2 · realized (dashed)</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9D3E4">The weak competitor gives up the shared zone and keeps only what Species 1 doesn't use. That smaller, dashed area is its <b>realized niche</b>.</p>
+</div>
+
+</div>
+
+<div aria-hidden="true" style="display: flex; justify-content: center"><svg width="28" height="36" viewBox="0 0 28 36" fill="none" stroke="#5A6C8E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v28"></path><path d="M5 22l9 9 9-9"></path></svg></div>
+
+<div style="display: flex; flex-direction: column; gap: 10px; min-width: 0; padding: 22px; border-radius: 16px; background: #0E1524; border: 1px solid rgba(57,229,140,0.5); box-shadow: inset 0 1px 0 rgba(57,229,140,0.5), 0 -20px 60px -40px rgba(57,229,140,0.6)">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #39E58C">RESULT</span>
+<h3 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 22px; line-height: 1.2; letter-spacing: -0.02em">Species coexistence</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9D3E4; max-width: 52em">Both species persist, because the weaker competitor uses the non-overlapping resources. Its realized niche is smaller than its fundamental niche. Splitting resources this way is called <b>niche partitioning</b> (or resource partitioning).</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.55; color: #93A2BC; max-width: 56em">Classic example: Connell's barnacles. The upper-shore species can survive lower down, so the lower shore is in its fundamental niche. Competition from the lower-shore species keeps it high, so its realized niche is only the upper shore.</p>
+</div>
+</section>
+
+</div>
+
+<details id="comp-vocab" style="margin-block: 8px 40px; padding: 18px 22px; border-radius: 16px; background: #0B1120; border: 1px solid #22304A; scroll-margin-top: 16px">
+<summary style="cursor: pointer; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 20px; line-height: 1.3; letter-spacing: -0.02em">Competition vocab · 12 terms</summary>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 14px; margin-top: 18px">
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 18px 20px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-weight: 700; font-size: 16px">Niche</span>
+<span style="font-size: 15px; line-height: 1.55; color: #C9D3E4">The range of resources and conditions a species uses. It can be plotted on axes such as temperature, rainfall or food type. A niche is not a habitat.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 18px 20px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-weight: 700; font-size: 16px">Niche overlap</span>
+<span style="font-size: 15px; line-height: 1.55; color: #C9D3E4">The part of two niches that both species use. More overlap means stronger competition.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 18px 20px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-weight: 700; font-size: 16px">Competition (−/−)</span>
+<span style="font-size: 15px; line-height: 1.55; color: #C9D3E4">An interaction that lowers the fitness of both species. If only one is harmed, it isn't competition.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 18px 20px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-weight: 700; font-size: 16px">Intraspecific vs. interspecific</span>
+<span style="font-size: 15px; line-height: 1.55; color: #C9D3E4">Competition within one species vs. between two different species.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 18px 20px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-weight: 700; font-size: 16px">Fitness</span>
+<span style="font-size: 15px; line-height: 1.55; color: #C9D3E4">How well individuals survive, grow and reproduce. It is the y-axis of the fitness graphs.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 18px 20px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-weight: 700; font-size: 16px">Asymmetric competition</span>
+<span style="font-size: 15px; line-height: 1.55; color: #C9D3E4">One species loses much more fitness than the other. More common in nature.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 18px 20px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-weight: 700; font-size: 16px">Symmetric competition</span>
+<span style="font-size: 15px; line-height: 1.55; color: #C9D3E4">Both species lose about the same amount of fitness.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 18px 20px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-weight: 700; font-size: 16px">Competitive exclusion principle</span>
+<span style="font-size: 15px; line-height: 1.55; color: #C9D3E4">Two species with identical niches cannot coexist. It happens when niches overlap completely and competition is asymmetric.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 18px 20px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-weight: 700; font-size: 16px">Fundamental niche</span>
+<span style="font-size: 15px; line-height: 1.55; color: #C9D3E4">Everything a species could use with no other species present.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 18px 20px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-weight: 700; font-size: 16px">Realized niche</span>
+<span style="font-size: 15px; line-height: 1.55; color: #C9D3E4">What a species actually uses once competitors are present. It is usually smaller than the fundamental niche.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 18px 20px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-weight: 700; font-size: 16px">Niche partitioning</span>
+<span style="font-size: 15px; line-height: 1.55; color: #C9D3E4">Competing species end up using different parts of the niche range, so their realized niches no longer overlap. Also called resource partitioning.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 18px 20px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-weight: 700; font-size: 16px">Coexistence</span>
+<span style="font-size: 15px; line-height: 1.55; color: #C9D3E4">Both species persist in the same place. It is the usual outcome when niches overlap only partly.</span>
+</div>
+</div>
+</details>
+
+
+<section id="mutualism" style="display: flex; flex-direction: column; gap: 12px; padding-block: 40px 20px; border-top: 1px solid #22304A; scroll-margin-top: 16px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.14em; color: #39E58C">PART 2</span>
+<h2 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: clamp(28px, 5vw, 40px); line-height: 1.1; letter-spacing: -0.03em">Mutualism</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #B7C3D8; max-width: 42em">A mutualism is a trade between two species. Whether it stays a mutualism comes down to one question: is the benefit bigger than the cost?</p>
+</section>
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 18px; padding: 18px 22px; margin-bottom: 14px; border-radius: 16px; background: #0B1120; border: 1px solid #22304A">
+<span aria-hidden="true" style="display: flex; align-items: center; justify-content: center; flex: none; width: 52px; height: 52px; border-radius: 50%; background: #39E58C; color: #04140B; box-shadow: 0 0 28px rgba(57,229,140,0.45)"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></span>
+<div style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #39E58C">VIDEO · 5 MIN</span>
+<span style="font-weight: 700; font-size: 17px; line-height: 1.3">Mutualism: trade, cost, cheating</span>
+<span style="font-size: 14px; line-height: 1.5; color: #93A2BC">This part follows the video scene by scene. Video walkthroughs are on the <a href="https://www.youtube.com/@enterlabrynth" style="color: #39E58C">EnterLabrynth YouTube channel</a>.</span>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 14px; padding-bottom: 40px">
+
+<section style="display: flex; flex-direction: column; gap: 18px; padding: 24px 26px; border-radius: 18px; background: #0E1524; border: 1px solid #22304A">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #93A2BC">START · MUTUALISM IS A + / + INTERACTION</span>
+<h2 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 24px; line-height: 1.2; letter-spacing: -0.02em">Two species trade, and both gain</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #C9D3E4; max-width: 46em">Each species has something the other needs. Each one gives a benefit and gets one back, so both end up with higher fitness.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 18px; align-items: start">
+
+<div style="display: flex; flex-direction: column; gap: 12px; min-width: 0; padding: 20px; border-radius: 16px; background: #0B1120; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #93A2BC">GRAPH · FITNESS, ALONE VS. TOGETHER</span>
+<h3 style="margin: 0; font-weight: 700; font-size: 19px; line-height: 1.3">Both do better together</h3>
+<div style="position: relative">
+<svg viewBox="0 0 400 230" role="img" aria-label="Fitness graph for mutualism. Each species has moderate fitness alone and higher fitness when the two live together." style="display: block; width: 100%; height: auto">
+<defs>
+<marker id="mut1-b" viewBox="0 0 8 8" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#6E9BFF"></path></marker>
+<marker id="mut1-y" viewBox="0 0 8 8" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#FFC23D"></path></marker>
+</defs>
+<rect width="400" height="230" rx="10" fill="#0A101D"></rect>
+<path d="M30 14 L30 195 L388 195" fill="none" stroke="#5A6C8E" stroke-width="1.5"></path>
+<path d="M207 28 L207 195" fill="none" stroke="#5A6C8E" stroke-width="1.5" stroke-dasharray="4 5"></path>
+<path d="M95.7 135.6 L198.7 67.5" fill="none" stroke="#6E9BFF" stroke-width="2.5" stroke-linecap="round" marker-end="url(#mut1-b)"></path>
+<path d="M318.7 136.7 L216.1 90.1" fill="none" stroke="#FFC23D" stroke-width="2.5" stroke-linecap="round" marker-end="url(#mut1-y)"></path>
+<circle cx="89" cy="140" r="6" fill="#6E9BFF"></circle>
+<circle cx="326" cy="140" r="6" fill="#FFC23D"></circle>
+<circle cx="207" cy="62" r="6" fill="#6E9BFF"></circle>
+<circle cx="207" cy="86" r="6" fill="#FFC23D"></circle>
+</svg>
+<span style="position: absolute; left: 9.5%; top: 4%; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.1em; color: #93A2BC">↑ FITNESS</span>
+<span style="position: absolute; left: 51.75%; top: 66%; transform: translateX(-50%); padding: 0 6px; background: #0A101D; font-size: 12px; line-height: 16px; font-weight: 700; color: #E8EEF8; white-space: nowrap">Both gain fitness</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding-left: 7.5%; padding-right: 3.75%; font-size: 12px; line-height: 1.3; color: #93A2BC; text-align: center">
+<span>Species 1 alone</span><span>1 + 2 together</span><span>Species 2 alone</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9D3E4">This is the competition graph flipped: there, both lines go down. Here, both go up.</p>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 14px; min-width: 0; padding: 20px; border-radius: 16px; background: #0B1120; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #93A2BC">THE PRICE</span>
+<h3 style="margin: 0; font-weight: 700; font-size: 19px; line-height: 1.3">Nothing is free</h3>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #FF8FAA">COST</span>
+<div aria-hidden="true" style="width: 42%; height: 26px; border-radius: 8px; background: #FF6B8F; box-shadow: 0 0 18px rgba(255,107,143,0.4)"></div>
+<span style="font-size: 14px; line-height: 1.5; color: #93A2BC">Making nectar, giving up sugars, housing a partner</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #39E58C">BENEFIT</span>
+<div aria-hidden="true" style="width: 94%; height: 26px; border-radius: 8px; background: #39E58C; box-shadow: 0 0 18px rgba(57,229,140,0.4)"></div>
+<span style="font-size: 14px; line-height: 1.5; color: #93A2BC">Nutrients, pollen delivered, protection</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9D3E4">A mutualism always has a cost. It lasts because the benefit is bigger.</p>
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 16px; border-radius: 12px; background: rgba(110,155,255,0.08); border: 1px solid rgba(110,155,255,0.35)">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; color: #8FB0FF">SYMBIOSIS</span>
+<span style="font-size: 15px; line-height: 1.5">A very close interaction between two species, evolved over a long time. Many mutualisms are one.</span>
+</div>
+</div>
+
+</div>
+</section>
+
+<div aria-hidden="true" style="display: flex; justify-content: center"><svg width="28" height="36" viewBox="0 0 28 36" fill="none" stroke="#5A6C8E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v28"></path><path d="M5 22l9 9 9-9"></path></svg></div>
+
+<section style="display: flex; flex-direction: column; gap: 14px; padding: 24px 26px; border-radius: 18px; background: #0E1524; border: 1px solid #3A4A68">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #39E58C">THE QUESTION</span>
+<h2 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 24px; line-height: 1.2; letter-spacing: -0.02em">Which is bigger, the benefit or the cost?</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #C9D3E4; max-width: 46em">Every trade has both. The same two species can move from one answer to the other when conditions change.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="#mut-a" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 20px; border-radius: 10px; border: 1.5px solid #39E58C; color: #8FF2C0; text-decoration: none; font-weight: 700; font-size: 15px">The benefit: go to Track A
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M6 13l6 6 6-6"></path></svg></a>
+<a href="#mut-b" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 20px; border-radius: 10px; border: 1.5px solid #FF6B8F; color: #FFB3C4; text-decoration: none; font-weight: 700; font-size: 15px">The cost: go to Track B
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M6 13l6 6 6-6"></path></svg></a>
+</div>
+</section>
+
+<div aria-hidden="true" style="display: flex; justify-content: center"><svg width="28" height="36" viewBox="0 0 28 36" fill="none" stroke="#5A6C8E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v28"></path><path d="M5 22l9 9 9-9"></path></svg></div>
+
+<section id="mut-a" style="display: flex; flex-direction: column; gap: 18px; padding: 26px; border-radius: 22px; background: #0B1120; border: 1px solid #22304A; scroll-margin-top: 16px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #39E58C">TRACK A · BENEFIT &gt; COST</span>
+<h2 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 30px; line-height: 1.15; letter-spacing: -0.03em">The trade holds</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #C9D3E4; max-width: 46em">Three classic trades, all between a plant and a partner.</p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 18px; align-items: start">
+
+<div style="display: flex; flex-direction: column; gap: 12px; min-width: 0; padding: 20px; border-radius: 16px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #FF8FAA">TRADE 1 · NITROGEN</span>
+<h3 style="margin: 0; font-weight: 700; font-size: 19px; line-height: 1.3"><i>Rhizobium</i> + legumes</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9D3E4">Plants need nitrogen but can't use the N₂ gas in air. <i>Rhizobium</i> bacteria live in bumps on legume roots called <b>nodules</b>, where they <b>fix nitrogen</b>: N₂ becomes ammonia the plant can use.</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px">
+<span style="padding: 6px 12px; border-radius: 999px; border: 1.5px solid #6E9BFF; color: #9DBBFF">N₂</span>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#93A2BC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
+<span style="padding: 6px 12px; border-radius: 999px; background: #39E58C; color: #04140B">NH₃</span>
+<span style="font-family: 'Atkinson Hyperlegible', system-ui, sans-serif; font-size: 13px; color: #93A2BC">inside a nodule</span>
+</div>
+<div style="display: flex; flex-direction: column; border-top: 1px solid #22304A; font-size: 15px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; padding-block: 10px; border-bottom: 1px solid #22304A"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; color: #39E58C">PLANT GETS</span><span style="font-weight: 700">Nitrogen it can use</span></div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; padding-block: 10px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; color: #FFC23D">BACTERIA GET</span><span style="font-weight: 700">Sugars and a home</span></div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 12px; min-width: 0; padding: 20px; border-radius: 16px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #FFC23D">TRADE 2 · PHOSPHATE</span>
+<h3 style="margin: 0; font-weight: 700; font-size: 19px; line-height: 1.3">Mycorrhizal fungi</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9D3E4">Roots can only reach the nutrients right next to them. Fungal threads grow out from the roots, reach much farther, and carry <b>phosphate</b> back.</p>
+<div style="display: flex; align-items: baseline; gap: 10px">
+<span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 30px; letter-spacing: -0.02em; color: #FFC23D">90%+</span>
+<span style="font-size: 14px; line-height: 1.4; color: #93A2BC">of land plants have these fungal partners</span>
+</div>
+<div style="display: flex; flex-direction: column; border-top: 1px solid #22304A; font-size: 15px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; padding-block: 10px; border-bottom: 1px solid #22304A"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; color: #39E58C">PLANT GETS</span><span style="font-weight: 700">Phosphate and other nutrients</span></div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; padding-block: 10px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; color: #FFC23D">FUNGI GET</span><span style="font-weight: 700">Sugars</span></div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 12px; min-width: 0; padding: 20px; border-radius: 16px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #C7AEFF">TRADE 3 · POLLEN</span>
+<h3 style="margin: 0; font-weight: 700; font-size: 19px; line-height: 1.3">Flowers + pollinators</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9D3E4">A flower offers nectar, and the pollinator that comes for it carries pollen to the next flower.</p>
+<ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 15px; line-height: 1.5; color: #C9D3E4">
+<li><b>Pollination:</b> pollen moves from an <b>anther</b> to a <b>stigma</b>.</li>
+<li>A pollen tube grows down to the <b>ovule</b>, where the egg waits.</li>
+<li><b>Fertilization:</b> sperm meets egg.</li>
+<li>The ovule becomes the <b>seed</b>.</li>
+</ol>
+<div style="display: flex; flex-direction: column; border-top: 1px solid #22304A; font-size: 15px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; padding-block: 10px; border-bottom: 1px solid #22304A"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; color: #39E58C">PLANT GETS</span><span style="font-weight: 700">Pollen delivered</span></div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; padding-block: 10px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; color: #FFC23D">POLLINATOR GETS</span><span style="font-weight: 700">Nectar</span></div>
+</div>
+</div>
+
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 18px; align-items: start">
+
+<div style="display: flex; flex-direction: column; gap: 12px; min-width: 0; padding: 20px; border-radius: 16px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #93A2BC">OVER TIME · SHAPED BY EACH OTHER</span>
+<h3 style="margin: 0; font-weight: 700; font-size: 19px; line-height: 1.3">Coevolution</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9D3E4">Partners shape each other. Each species is natural selection acting on the other, so the two evolve together.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); gap: 10px">
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border-radius: 12px; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; color: #39E58C">COMET ORCHID</span>
+<span style="font-size: 15px; line-height: 1.45">Hides its nectar at the bottom of a foot-long spur</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border-radius: 12px; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; color: #FFC23D">ITS MOTH</span>
+<span style="font-size: 15px; line-height: 1.45">Has a tongue just as long</span>
+</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 12px; min-width: 0; padding: 20px; border-radius: 16px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #93A2BC">GRAPH · EFFECT ON THE NICHE</span>
+<h3 style="margin: 0; font-weight: 700; font-size: 19px; line-height: 1.3">A partner opens doors</h3>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.1em; color: #93A2BC">↑ INDIVIDUALS USING THE RESOURCE</span>
+<svg viewBox="0 0 400 230" role="img" aria-label="Niche graph. The dashed curve is the fundamental niche. The larger filled curve is the realized niche with a mutualist, which extends beyond the fundamental niche on both sides." style="display: block; width: 100%; height: auto">
+<rect width="400" height="230" rx="10" fill="#0A101D"></rect>
+<path d="M30 195 L30 188.4 L36 186.9 L42 185 L48 182.9 L54 180.4 L60 177.4 L66 174.1 L72 170.3 L78 166.1 L84 161.3 L90 156.1 L96 150.4 L102 144.2 L108 137.6 L114 130.6 L120 123.2 L126 115.7 L132 107.9 L138 100.1 L144 92.4 L150 84.8 L156 77.6 L162 70.8 L168 64.6 L174 59 L180 54.3 L186 50.4 L192 47.6 L198 45.7 L204 45 L210 45.4 L216 46.8 L222 49.4 L228 52.9 L234 57.3 L240 62.6 L246 68.6 L252 75.3 L258 82.4 L264 89.8 L270 97.5 L276 105.3 L282 113.1 L288 120.7 L294 128.2 L300 135.3 L306 142 L312 148.4 L318 154.2 L324 159.6 L330 164.5 L336 169 L342 172.9 L348 176.4 L354 179.4 L360 182.1 L366 184.3 L372 186.3 L378 187.9 L384 189.3 L384 195 Z" fill="rgba(57,229,140,0.25)" stroke="#39E58C" stroke-width="2.5" stroke-linejoin="round"></path>
+<path d="M78 194.2 L84 193.8 L90 193.1 L96 192.1 L102 190.6 L108 188.7 L114 186 L120 182.5 L126 177.9 L132 172.3 L138 165.5 L144 157.5 L150 148.4 L156 138.3 L162 127.7 L168 116.8 L174 106.1 L180 96.3 L186 87.8 L192 81.2 L198 76.8 L204 75 L210 75.9 L216 79.5 L222 85.4 L228 93.3 L234 102.7 L240 113.2 L246 124 L252 134.8 L258 145.1 L264 154.6 L270 163 L276 170.2 L282 176.2 L288 181.1 L294 184.9 L300 187.8 L306 190 L312 191.6 L318 192.8 L324 193.6 L330 194.1" fill="none" stroke="#E8EEF8" stroke-width="2" stroke-dasharray="6 5"></path>
+<path d="M30 14 L30 195 L388 195" fill="none" stroke="#5A6C8E" stroke-width="1.5"></path>
+</svg>
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.1em; color: #93A2BC; text-align: center">NICHE RANGE →</div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: #C9D3E4">
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 16px; height: 0; border-top: 2px dashed #E8EEF8"></span>Fundamental niche · alone</span>
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 12px; height: 12px; border-radius: 3px; background: #39E58C"></span>Realized niche · with a mutualist</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9D3E4">A mutualist can stretch a species' realized niche beyond its fundamental niche. That is the opposite of competition, which shrinks it.</p>
+</div>
+
+</div>
+
+<div aria-hidden="true" style="display: flex; justify-content: center"><svg width="28" height="36" viewBox="0 0 28 36" fill="none" stroke="#5A6C8E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v28"></path><path d="M5 22l9 9 9-9"></path></svg></div>
+
+<div style="display: flex; flex-direction: column; gap: 10px; min-width: 0; padding: 22px; border-radius: 16px; background: #0E1524; border: 1px solid rgba(57,229,140,0.5); box-shadow: inset 0 1px 0 rgba(57,229,140,0.5), 0 -20px 60px -40px rgba(57,229,140,0.6)">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #39E58C">RESULT</span>
+<h3 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 22px; line-height: 1.2; letter-spacing: -0.02em">Mutualism, + / +</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9D3E4; max-width: 52em">Both species gain fitness, and the realized niche can grow beyond the fundamental niche.</p>
+</div>
+</section>
+
+<section id="mut-b" style="display: flex; flex-direction: column; gap: 18px; padding: 26px; border-radius: 22px; background: #0B1120; border: 1px solid #22304A; scroll-margin-top: 16px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #FF8FAA">TRACK B · COST &gt; BENEFIT</span>
+<h2 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 30px; line-height: 1.15; letter-spacing: -0.03em">The trade tips over</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #C9D3E4; max-width: 46em">Two ways it happens: a partner cheats, or conditions change.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 18px; align-items: start">
+
+<div style="display: flex; flex-direction: column; gap: 14px; min-width: 0; padding: 20px; border-radius: 16px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #FF8FAA">WAY 1 · CHEATING</span>
+<h3 style="margin: 0; font-weight: 700; font-size: 19px; line-height: 1.3">Taking the benefit without paying the cost</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9D3E4">Because a mutualism has a cost, some partners skip it.</p>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; align-items: baseline; gap: 10px">
+<span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 30px; letter-spacing: -0.02em">~22,000</span>
+<span style="font-size: 14px; color: #93A2BC">orchid species</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; font-weight: 700; font-size: 14px; line-height: 1.3; text-align: center">
+<span style="padding: 12px 8px; border-radius: 10px; background: #39E58C; color: #04140B">About half reward pollinators</span>
+<span style="padding: 12px 8px; border-radius: 10px; background: #FF6B8F; color: #2A0410">About half give no reward</span>
+</div>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9D3E4">The orchids that give nothing get pollinated anyway. This is <b>deceit pollination</b>.</p>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 12px; min-width: 0; padding: 20px; border-radius: 16px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #FF8FAA">WAY 2 · CONDITIONS CHANGE</span>
+<h3 style="margin: 0; font-weight: 700; font-size: 19px; line-height: 1.3">Ants + Acacia trees</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9D3E4">The tree gives food and hollow thorns to live in; the ants defend it from herbivores. But some ants also farm sap-sucking insects on the tree, so more ants means more sap lost.</p>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.1em; color: #93A2BC">↑ COST AND BENEFIT TO THE TREE</span>
+<div style="position: relative">
+<svg viewBox="0 0 400 230" role="img" aria-label="Cost and benefit to the tree against number of ants. Benefit rises quickly then levels off. Cost rises steadily. Where the lines cross, mutualism becomes parasitism." style="display: block; width: 100%; height: auto">
+<rect width="400" height="230" rx="10" fill="#0A101D"></rect>
+<rect x="30" y="20" width="227" height="175" fill="rgba(57,229,140,0.09)"></rect>
+<rect x="257" y="20" width="128" height="175" fill="rgba(255,107,143,0.11)"></rect>
+<path d="M257 20 L257 195" fill="none" stroke="#B7C3D8" stroke-width="1.5" stroke-dasharray="5 5"></path>
+<path d="M30 195 L36 184.5 L42 175 L48.1 166.5 L54.1 158.7 L60.1 151.8 L66.1 145.4 L72.1 139.7 L78.1 134.6 L84.2 129.9 L90.2 125.7 L96.2 121.9 L102.2 118.5 L108.2 115.4 L114.2 112.6 L120.3 110.1 L126.3 107.8 L132.3 105.8 L138.3 103.9 L144.3 102.2 L150.3 100.7 L156.4 99.3 L162.4 98.1 L168.4 97 L174.4 96 L180.4 95 L186.4 94.2 L192.5 93.5 L198.5 92.8 L204.5 92.2 L210.5 91.6 L216.5 91.1 L222.5 90.7 L228.6 90.3 L234.6 89.9 L240.6 89.6 L246.6 89.3 L252.6 89 L258.6 88.8 L264.7 88.6 L270.7 88.4 L276.7 88.2 L282.7 88 L288.7 87.9 L294.7 87.7 L300.8 87.6 L306.8 87.5 L312.8 87.4 L318.8 87.3 L324.8 87.2 L330.8 87.2 L336.9 87.1 L342.9 87 L348.9 87 L354.9 86.9 L360.9 86.9 L366.9 86.9 L373 86.8 L379 86.8 L385 86.8" fill="none" stroke="#39E58C" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"></path>
+<path d="M30 195 L385 28.8" fill="none" stroke="#FF6B8F" stroke-width="3" stroke-linecap="round" stroke-dasharray="9 5"></path>
+<path d="M30 14 L30 195 L388 195" fill="none" stroke="#5A6C8E" stroke-width="1.5"></path>
+</svg>
+<span style="position: absolute; left: 35.75%; top: 11%; transform: translateX(-50%); font-size: 12px; line-height: 16px; font-weight: 700; color: #39E58C; white-space: nowrap">Mutualism + / +</span>
+<span style="position: absolute; left: 80.25%; top: 62%; transform: translateX(-50%); font-size: 12px; line-height: 16px; font-weight: 700; color: #FF8FAA; text-align: center; white-space: nowrap">Parasitism<br>+ / −</span>
+</div>
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.1em; color: #93A2BC; text-align: center">NUMBER OF ANTS →</div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: #C9D3E4">
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 16px; height: 0; border-top: 3px solid #39E58C"></span>Benefit · levels off</span>
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 16px; height: 0; border-top: 3px dashed #FF6B8F"></span>Cost · keeps rising</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9D3E4">Few ants: benefit wins. Too many ants: cost wins, and the same partnership is now parasitism. The curves show the shape of the idea, not measured data.</p>
+</div>
+
+</div>
+
+<div aria-hidden="true" style="display: flex; justify-content: center"><svg width="28" height="36" viewBox="0 0 28 36" fill="none" stroke="#5A6C8E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v28"></path><path d="M5 22l9 9 9-9"></path></svg></div>
+
+<div style="display: flex; flex-direction: column; gap: 10px; min-width: 0; padding: 22px; border-radius: 16px; background: #0E1524; border: 1px solid rgba(255,107,143,0.5); box-shadow: inset 0 1px 0 rgba(255,107,143,0.5), 0 -20px 60px -40px rgba(255,107,143,0.6)">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #FF8FAA">RESULT</span>
+<h3 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 22px; line-height: 1.2; letter-spacing: -0.02em">Parasitism, + / −</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9D3E4; max-width: 52em">One species gains and the other loses. The same two species can move between the two sides as conditions change.</p>
+</div>
+</section>
+
+</div>
+
+<section id="mut-lock" style="display: flex; flex-direction: column; gap: 18px; padding-block: 16px 40px; scroll-margin-top: 16px">
+<h2 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 32px; letter-spacing: -0.03em">Lock it in</h2>
+<ol style="margin: 0; padding: 22px 26px 22px 48px; display: flex; flex-direction: column; gap: 12px; border-radius: 16px; background: #0E1524; border: 1px solid #22304A; font-size: 17px; line-height: 1.55; color: #E8EEF8">
+<li>Mutualism raises fitness for <b>both</b> species: + / +.</li>
+<li>There is <b>always a cost</b>. It lasts while the benefit beats the cost.</li>
+<li><i>Rhizobium</i> fixes nitrogen. Mycorrhizal fungi supply phosphate.</li>
+<li>Pollen travels <b>anther → stigma</b>. The ovule becomes the seed.</li>
+<li>If the cost beats the benefit, mutualism becomes <b>parasitism</b>.</li>
+</ol>
+</section>
+
+<details id="mut-vocab" style="margin-block: 8px 40px; padding: 18px 22px; border-radius: 16px; background: #0B1120; border: 1px solid #22304A; scroll-margin-top: 16px">
+<summary style="cursor: pointer; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 20px; line-height: 1.3; letter-spacing: -0.02em">Mutualism vocab · 12 terms</summary>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 14px; margin-top: 18px">
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 18px 20px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-weight: 700; font-size: 16px">Mutualism (+ / +)</span>
+<span style="font-size: 15px; line-height: 1.55; color: #C9D3E4">An interaction that raises the fitness of both species.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 18px 20px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-weight: 700; font-size: 16px">Symbiosis</span>
+<span style="font-size: 15px; line-height: 1.55; color: #C9D3E4">A very close interaction between two species, evolved over a long time.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 18px 20px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-weight: 700; font-size: 16px">Nitrogen fixation</span>
+<span style="font-size: 15px; line-height: 1.55; color: #C9D3E4">Turning N₂ gas into a form plants can use. <i>Rhizobium</i> does it inside root nodules.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 18px 20px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-weight: 700; font-size: 16px">Nodule</span>
+<span style="font-size: 15px; line-height: 1.55; color: #C9D3E4">A bump on a legume root that houses <i>Rhizobium</i> bacteria.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 18px 20px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-weight: 700; font-size: 16px">Mycorrhizal fungi</span>
+<span style="font-size: 15px; line-height: 1.55; color: #C9D3E4">Fungi that live on or in plant roots and supply phosphate in exchange for sugars.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 18px 20px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-weight: 700; font-size: 16px">Pollination</span>
+<span style="font-size: 15px; line-height: 1.55; color: #C9D3E4">Moving pollen from an anther, where it is made, to a stigma, where it is received.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 18px 20px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-weight: 700; font-size: 16px">Fertilization</span>
+<span style="font-size: 15px; line-height: 1.55; color: #C9D3E4">Sperm from the pollen meets the egg inside the ovule. The ovule then becomes the seed.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 18px 20px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-weight: 700; font-size: 16px">Coevolution</span>
+<span style="font-size: 15px; line-height: 1.55; color: #C9D3E4">Two interacting species each put selective pressure on the other, so they evolve together.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 18px 20px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-weight: 700; font-size: 16px">Cheating</span>
+<span style="font-size: 15px; line-height: 1.55; color: #C9D3E4">Taking the benefit of a mutualism without paying the cost.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 18px 20px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-weight: 700; font-size: 16px">Deceit pollination</span>
+<span style="font-size: 15px; line-height: 1.55; color: #C9D3E4">A flower gets pollinated without rewarding its pollinator. About half of orchid species do this.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 18px 20px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-weight: 700; font-size: 16px">Parasitism (+ / −)</span>
+<span style="font-size: 15px; line-height: 1.55; color: #C9D3E4">One species gains and the other loses. A mutualism becomes this when its cost outgrows its benefit.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 18px 20px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-weight: 700; font-size: 16px">Realized niche, with a mutualist</span>
+<span style="font-size: 15px; line-height: 1.55; color: #C9D3E4">Can be larger than the fundamental niche, because the partner lets the species live where it couldn't alone.</span>
+</div>
+</div>
+</details>
+
+<nav aria-label="Module navigation" style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; padding-block: 24px 56px; border-top: 1px solid #22304A">
+<a href="communities-ecosystems-climate.html" style="display: inline-flex; align-items: center; gap: 8px; min-height: 46px; text-decoration: none; font-weight: 700; font-size: 15px">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"></path><path d="M11 6l-6 6 6 6"></path></svg>Unit 2 mind map</a>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; color: #93A2BC">NEXT · MODULE 2.2</span>
+<span style="font-size: 15px; color: #B7C3D8">Endosymbiosis &amp; Food Webs · soon</span>
+</div>
+</nav>
+
+</div>
+</div>
+</body>
+</html>

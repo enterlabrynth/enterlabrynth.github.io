@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cellular Metabolism · EnterLabrynth</title>
+<meta name="description" content="How a cell pulls energy out of glucose: glycolysis, pyruvate processing and the citric acid cycle.">
+<meta property="og:title" content="Cellular Metabolism · EnterLabrynth">
+<meta property="og:description" content="How a cell pulls energy out of glucose: glycolysis, pyruvate processing and the citric acid cycle.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&amp;family=Atkinson+Hyperlegible:wght@400;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap">
+<style>
+body{margin:0;background:#070B14;color:#E8EEF8;font-family:'Atkinson Hyperlegible',system-ui,-apple-system,'Segoe UI',sans-serif}
+a{color:#E8EEF8}a:hover{color:#FFFFFF}
+button{font-family:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible{outline:2px solid #39E58C;outline-offset:2px}
+@keyframes br-pulse{0%,100%{opacity:.8;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
+.br-pulse{animation:br-pulse 3.5s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){.br-pulse{animation:none}}
+</style>
+<style>html{height:100%;background:#070B14}body{min-height:100%}#dc-root{min-height:100vh}</style>
+</head>
+<body>
+<div id="dc-root"></div>
+<noscript><p style="padding:24px;color:#E8EEF8;font-family:system-ui,sans-serif">This page needs JavaScript turned on.</p></noscript>
+<template id="dc-template">
+
+<div style="width: 100%; min-height: 100%; background: #070B14; color: #E8EEF8; font-family: 'Atkinson Hyperlegible', system-ui, sans-serif">
+<div style="max-width: 1180px; margin: 0 auto; padding-inline: 24px; box-sizing: border-box">
+
+<header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-block: 22px">
+<a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #E8EEF8">
+<span style="width: 30px; height: 30px; border-radius: 50%; background: radial-gradient(circle at 50% 50%, #6E9BFF 0 28%, rgba(57,229,140,0.9) 30% 62%, rgba(57,229,140,0) 72%); box-shadow: 0 0 18px rgba(57,229,140,0.55)"></span>
+<span style="display: flex; flex-direction: column; gap: 3px"><span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 20px; line-height: 1.1; letter-spacing: -0.01em">Enter<span style="color: #39E58C">Lab</span>rynth</span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.16em; color: #B7C3D8">GET BENCH READY</span><span style="font-size: 10.5px; line-height: 1.2; color: #FF6B8F">created by Isabel Kaur Saini</span></span>
+</a>
+<nav style="display: flex; flex-wrap: wrap; gap: 4px; font-size: 15px">
+<a href="index.html" style="text-decoration: none; padding: 12px">Biology</a>
+<a href="index.html" style="text-decoration: none; padding: 12px; color: #93A2BC">Chemistry</a>
+<a href="index.html" style="text-decoration: none; padding: 12px">Podcast</a>
+<a href="index.html" style="text-decoration: none; padding: 12px">About</a>
+</nav>
+</header>
+
+<section style="display: flex; flex-direction: column; gap: 16px; padding-block: 24px 24px">
+<nav aria-label="Breadcrumb" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 14px; color: #93A2BC">
+<a href="index.html" style="color: #93A2BC">Biology</a><span aria-hidden="true">/</span>
+<a href="molecular-cellular.html" style="color: #93A2BC">Molecular &amp; Cellular Biology</a><span aria-hidden="true">/</span>
+<span style="color: #E8EEF8">Cellular Metabolism</span>
+</nav>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center">
+<span style="display: inline-flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; color: #39E58C"><span style="width: 9px; height: 9px; border-radius: 50%; background: #39E58C; box-shadow: 0 0 10px #39E58C"></span>CH1 · MOLECULAR &amp; CELLULAR · MODULE 2.1</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; color: #93A2BC; padding: 4px 9px; border: 1px solid #22304A; border-radius: 999px">PAIRS WITH BIO 172 · LECTURE 9</span>
+</div>
+<h1 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: clamp(30px, 7vw, 56px); line-height: 1.02; letter-spacing: -0.035em; text-wrap: balance; overflow-wrap: anywhere">Cellular <span style="color: #39E58C; text-shadow: 0 0 28px rgba(57,229,140,0.4)">Metabolism</span></h1>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #B7C3D8; max-width: 40em">Where the energy in food actually lives, and how a cell pulls it out of glucose in small, controlled steps: glycolysis, pyruvate processing and the citric acid cycle.</p>
+</section>
+
+<div role="tablist" aria-label="Module content" style="position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; display: flex; flex-wrap: wrap; gap: 6px; padding: 8px; border-radius: 16px; background: #0B1120; border: 1px solid #22304A">
+<button type="button" role="tab" onClick="{{go.notes}}" style="flex: 1 1 120px; min-height: 46px; border-radius: 10px; border: 1px solid {{tb.notes.border}}; background: {{tb.notes.bg}}; color: {{tb.notes.fg}}; font-weight: 700; font-size: 15px">Notes</button>
+<button type="button" role="tab" onClick="{{go.info}}" style="flex: 1 1 120px; min-height: 46px; border-radius: 10px; border: 1px solid {{tb.info.border}}; background: {{tb.info.bg}}; color: {{tb.info.fg}}; font-weight: 700; font-size: 15px">Infographics</button>
+<button type="button" role="tab" onClick="{{go.slides}}" style="flex: 1 1 120px; min-height: 46px; border-radius: 10px; border: 1px solid {{tb.slides.border}}; background: {{tb.slides.bg}}; color: {{tb.slides.fg}}; font-weight: 700; font-size: 15px">Slides</button>
+<button type="button" role="tab" onClick="{{go.quiz}}" style="flex: 1 1 120px; min-height: 46px; border-radius: 10px; border: 1px solid {{tb.quiz.border}}; background: {{tb.quiz.bg}}; color: {{tb.quiz.fg}}; font-weight: 700; font-size: 15px">Quiz cards</button>
+<button type="button" role="tab" onClick="{{go.video}}" style="flex: 1 1 120px; min-height: 46px; border-radius: 10px; border: 1px solid {{tb.video.border}}; background: {{tb.video.bg}}; color: {{tb.video.fg}}; font-weight: 700; font-size: 15px">Video</button>
+<button type="button" role="tab" onClick="{{go.podcast}}" style="flex: 1 1 120px; min-height: 46px; border-radius: 10px; border: 1px solid {{tb.podcast.border}}; background: {{tb.podcast.bg}}; color: {{tb.podcast.fg}}; font-weight: 700; font-size: 15px">Podcast</button>
+</div>
+
+<div style="padding-block: 28px 40px">
+
+<!-- ==================== NOTES ==================== -->
+<sc-if value="{{show.notes}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start">
+
+<aside style="flex: 1 1 220px; min-width: 0; display: flex; flex-direction: column; gap: 4px; padding: 18px; border-radius: 16px; background: #0B1120; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.14em; color: #FFC23D; padding-bottom: 8px">IN THESE NOTES</span>
+<a href="#n1" style="text-decoration: none; font-size: 14px; padding: 8px 0; color: #B7C3D8">1 · Energy lives in electrons</a>
+<a href="#n2" style="text-decoration: none; font-size: 14px; padding: 8px 0; color: #B7C3D8">2 · Redox reactions</a>
+<a href="#n3" style="text-decoration: none; font-size: 14px; padding: 8px 0; color: #B7C3D8">3 · The energy carriers</a>
+<a href="#n4" style="text-decoration: none; font-size: 14px; padding: 8px 0; color: #B7C3D8">4 · Glycolysis</a>
+<a href="#n5" style="text-decoration: none; font-size: 14px; padding: 8px 0; color: #B7C3D8">5 · Pyruvate processing</a>
+<a href="#n6" style="text-decoration: none; font-size: 14px; padding: 8px 0; color: #B7C3D8">6 · Citric acid cycle</a>
+<a href="#n7" style="text-decoration: none; font-size: 14px; padding: 8px 0; color: #B7C3D8">7 · Scorecard per glucose</a>
+<a href="#n8" style="text-decoration: none; font-size: 14px; padding: 8px 0; color: #B7C3D8">8 · Exam checklist</a>
+</aside>
+
+<article style="flex: 999 1 600px; min-width: 0; display: flex; flex-direction: column; gap: 22px">
+
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 22px 24px; border-radius: 16px; background: rgba(57,229,140,0.07); border: 1px solid rgba(57,229,140,0.35)">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #6FF0AE">THE BIG IDEA</span>
+<p style="margin: 0; font-size: 18px; line-height: 1.6">Food stores energy in electrons that are shared evenly between carbon and hydrogen. Respiration moves those electrons, one controlled step at a time, onto carriers the cell can spend. What is left of the glucose leaves as CO₂.</p>
+</div>
+
+<section id="n1" style="display: flex; flex-direction: column; gap: 12px; padding: 26px; border-radius: 16px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #93A2BC">SECTION 1</span>
+<h2 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.02em">Energy lives in electrons</h2>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.6; color: #C9D3E4">
+<li>An electron's potential energy depends on <b style="color: #E8EEF8">where it sits</b>. Far from a positive nucleus, it has a lot. Pulled in close to one, it has little.</li>
+<li>In a <b style="color: #6FF0AE">nonpolar bond</b> (C–C, C–H) the two atoms share electrons almost evenly, so the electrons stay relatively far from either nucleus. These bonds are energy-rich.</li>
+<li>In a <b style="color: #E8EEF8">polar bond</b> (O–H, C=O) oxygen pulls the electrons toward itself. These bonds are energy-poor.</li>
+<li>Respiration turns fuel bonds into exhaust bonds. Glucose goes in, CO₂ and H₂O come out, and the energy difference is what the cell captures.</li>
+<li>Plants build fuel bonds using sunlight. Animals can't, so we eat molecules that already have them.</li>
+</ul>
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 12px; background: #141D30">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; color: #8FB0FF">THINK ABOUT IT</span>
+<span style="font-size: 15px; line-height: 1.55">Gasoline is almost all C–C and C–H bonds. Water is all O–H. That is why one burns and the other puts out fires.</span>
+</div>
+</section>
+
+<section id="n2" style="display: flex; flex-direction: column; gap: 12px; padding: 26px; border-radius: 16px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #93A2BC">SECTION 2</span>
+<h2 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.02em">Redox reactions</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 10px">
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 12px; background: #141D30; border: 1px solid #FF6B8F"><span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 20px; color: #FF8FAA">OIL</span><span style="font-size: 15px">Oxidation Is Loss of electrons</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 12px; background: #141D30; border: 1px solid #6E9BFF"><span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 20px; color: #8FB0FF">RIG</span><span style="font-size: 15px">Reduction Is Gain of electrons</span></div>
+</div>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.6; color: #C9D3E4">
+<li>Redox reactions are electron hand-offs. They are <b style="color: #E8EEF8">always paired</b>: if one molecule loses electrons, another gains them.</li>
+<li>In cells, electrons usually travel with a proton as a <b style="color: #E8EEF8">hydrogen atom</b>. Losing H means oxidized. Gaining H means reduced.</li>
+<li>Example: a carbon in sugar gives up 2 electrons and 2 H⁺. NAD⁺ takes the 2 electrons and 1 H⁺, becoming NADH. The other H⁺ floats off into solution.</li>
+<li>In respiration, <b style="color: #6FF0AE">glucose is the first donor</b> and <b style="color: #E8EEF8">oxygen is the last acceptor</b>. When O₂ is reduced, it becomes water.</li>
+</ul>
+</section>
+
+<section id="n3" style="display: flex; flex-direction: column; gap: 12px; padding: 26px; border-radius: 16px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #93A2BC">SECTION 3</span>
+<h2 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.02em">The energy carriers</h2>
+<div style="overflow-x: auto">
+<table style="width: 100%; min-width: 520px; border-collapse: collapse; font-size: 15px; line-height: 1.45">
+<thead><tr style="text-align: left; color: #93A2BC; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em">
+<th style="padding: 10px 12px 10px 0; border-bottom: 1px solid #2C3B58; font-weight: 500">MOLECULE</th>
+<th style="padding: 10px 12px; border-bottom: 1px solid #2C3B58; font-weight: 500">JOB</th>
+<th style="padding: 10px 12px; border-bottom: 1px solid #2C3B58; font-weight: 500; text-align: right">KCAL/MOL</th>
+<th style="padding: 10px 0 10px 12px; border-bottom: 1px solid #2C3B58; font-weight: 500">THINK OF IT AS</th>
+</tr></thead>
+<tbody>
+<tr><td style="padding: 12px 12px 12px 0; border-bottom: 1px solid #22304A; font-weight: 700; color: #6FF0AE">Glucose</td><td style="padding: 12px; border-bottom: 1px solid #22304A; color: #C9D3E4">Stored fuel</td><td style="padding: 12px; border-bottom: 1px solid #22304A; text-align: right; font-family: 'JetBrains Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums">686</td><td style="padding: 12px 0 12px 12px; border-bottom: 1px solid #22304A; color: #C9D3E4">The vault</td></tr>
+<tr><td style="padding: 12px 12px 12px 0; border-bottom: 1px solid #22304A; font-weight: 700; color: #9DBBFF">NADH, FADH₂</td><td style="padding: 12px; border-bottom: 1px solid #22304A; color: #C9D3E4">Carry high-energy electrons to the mitochondrial membrane</td><td style="padding: 12px; border-bottom: 1px solid #22304A; text-align: right; font-family: 'JetBrains Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums">52.6</td><td style="padding: 12px 0 12px 12px; border-bottom: 1px solid #22304A; color: #C9D3E4">The paycheck</td></tr>
+<tr><td style="padding: 12px 12px 12px 0; font-weight: 700; color: #FFD27A">ATP</td><td style="padding: 12px; color: #C9D3E4">Spent directly on cell work</td><td style="padding: 12px; text-align: right; font-family: 'JetBrains Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums">7.3</td><td style="padding: 12px 0 12px 12px; color: #C9D3E4">Pocket change</td></tr>
+</tbody>
+</table>
+</div>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.6; color: #C9D3E4">
+<li>The NADH value is for passing its electrons all the way to O₂. FADH₂ carries a bit less.</li>
+<li>ATP stores energy in three negatively charged phosphates packed side by side. Removing the last one relieves that repulsion.</li>
+<li><b style="color: #E8EEF8">NADH and FADH₂</b> are the reduced, loaded forms. <b style="color: #E8EEF8">NAD⁺ and FAD</b> are the oxidized, empty forms.</li>
+<li>All three carriers are modified nucleotides. Recognize them; you don't need to draw their structures.</li>
+</ul>
+</section>
+
+<section id="n4" style="display: flex; flex-direction: column; gap: 12px; padding: 26px; border-radius: 16px; background: #0E1524; border: 1px solid #22304A">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; align-items: center">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #93A2BC">SECTION 4</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; color: #6FF0AE; padding: 4px 9px; border-radius: 999px; background: rgba(57,229,140,0.12)">CYTOPLASM · NO O₂ NEEDED</span>
+</div>
+<h2 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.02em">Glycolysis</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #C9D3E4">"Sugar splitting." Ten enzyme steps turn one glucose (6 carbons) into two pyruvate (3 carbons each). You only need the three phases, not every step.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 10px">
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; border-radius: 12px; background: #141D30"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; color: #FF8FAA">1 · INVEST</span><span style="font-size: 15px; line-height: 1.5">2 ATP add phosphates to glucose, making <b>fructose 1,6-bisphosphate</b>. This is the one intermediate worth knowing by name.</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; border-radius: 12px; background: #141D30"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; color: #B7C3D8">2 · SPLIT</span><span style="font-size: 15px; line-height: 1.5">The 6-carbon sugar breaks into two 3-carbon molecules of G3P (glyceraldehyde 3-phosphate).</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; border-radius: 12px; background: #141D30"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; color: #6FF0AE">3 · PAYOFF</span><span style="font-size: 15px; line-height: 1.5">Each G3P becomes pyruvate, making 1 NADH and 2 ATP along the way.</span></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 10px">
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; border-radius: 12px; border: 1px solid #2C3B58"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; color: #93A2BC">GOES IN</span><span style="font-size: 15px; line-height: 1.5">1 glucose · 2 ATP · 2 NAD⁺</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; border-radius: 12px; border: 1px solid rgba(57,229,140,0.4)"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; color: #6FF0AE">COMES OUT</span><span style="font-size: 15px; line-height: 1.5">2 pyruvate · 4 ATP (net 2) · 2 NADH</span></div>
+</div>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.6; color: #C9D3E4">
+<li>Glycolysis makes ATP by <b style="color: #E8EEF8">substrate-level phosphorylation</b>: an enzyme moves a phosphate directly from a sugar molecule onto ADP.</li>
+<li>Only partial oxidation happens here. The two pyruvates still hold <b style="color: #E8EEF8">most of glucose's energy</b>.</li>
+</ul>
+</section>
+
+<section id="n5" style="display: flex; flex-direction: column; gap: 12px; padding: 26px; border-radius: 16px; background: #0E1524; border: 1px solid #22304A">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; align-items: center">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #93A2BC">SECTION 5</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; color: #9DBBFF; padding: 4px 9px; border-radius: 999px; background: rgba(110,155,255,0.12)">MITOCHONDRIAL MATRIX</span>
+</div>
+<h2 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.02em">Pyruvate processing</h2>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.6; color: #C9D3E4">
+<li>Pyruvate moves into the mitochondrion. One of its 3 carbons is cut off and leaves as <b style="color: #E8EEF8">CO₂</b>.</li>
+<li>The remaining 2-carbon piece is attached to <b style="color: #E8EEF8">coenzyme A</b> (built from a B vitamin), giving <b style="color: #E8EEF8">acetyl-CoA</b>.</li>
+<li>Each pyruvate makes <b style="color: #9DBBFF">1 NADH</b>, so 2 per glucose.</li>
+<li>Bacteria have no mitochondria, so they run this step and the next one in their cytosol.</li>
+</ul>
+</section>
+
+<section id="n6" style="display: flex; flex-direction: column; gap: 12px; padding: 26px; border-radius: 16px; background: #0E1524; border: 1px solid #22304A">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; align-items: center">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #93A2BC">SECTION 6</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; color: #9DBBFF; padding: 4px 9px; border-radius: 999px; background: rgba(110,155,255,0.12)">MITOCHONDRIAL MATRIX</span>
+</div>
+<h2 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.02em">Citric acid cycle</h2>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.6; color: #C9D3E4">
+<li>Acetyl-CoA feeds into a loop of reactions. Its 2 carbons are stripped off as <b style="color: #E8EEF8">2 CO₂</b>, and the loop resets for the next one.</li>
+<li>One turn makes <b style="color: #9DBBFF">3 NADH</b>, <b style="color: #FFD27A">1 FADH₂</b> and <b style="color: #6FF0AE">1 ATP</b>. One glucose gives two acetyl-CoA, so two turns.</li>
+<li>Its real product is <b style="color: #E8EEF8">loaded electron carriers</b>, not ATP.</li>
+</ul>
+<div style="overflow-x: auto; padding: 14px 16px; border-radius: 12px; background: #141D30; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; line-height: 1.7; white-space: nowrap; color: #E8EEF8">2 acetyl-CoA + 6 NAD⁺ + 2 FAD + 2 ADP + 2 Pᵢ → 4 CO₂ + 6 NADH + 2 FADH₂ + 2 ATP</div>
+</section>
+
+<section id="n7" style="display: flex; flex-direction: column; gap: 12px; padding: 26px; border-radius: 16px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #93A2BC">SECTION 7</span>
+<h2 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.02em">Scorecard per glucose</h2>
+<div style="overflow-x: auto">
+<table style="width: 100%; min-width: 560px; border-collapse: collapse; font-size: 15px; font-variant-numeric: tabular-nums">
+<thead><tr style="color: #93A2BC; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em">
+<th style="padding: 10px 12px 10px 0; border-bottom: 1px solid #2C3B58; font-weight: 500; text-align: left">STAGE</th>
+<th style="padding: 10px 12px; border-bottom: 1px solid #2C3B58; font-weight: 500; text-align: left">WHERE</th>
+<th style="padding: 10px 12px; border-bottom: 1px solid #2C3B58; font-weight: 500; text-align: right; color: #6FF0AE">ATP</th>
+<th style="padding: 10px 12px; border-bottom: 1px solid #2C3B58; font-weight: 500; text-align: right; color: #9DBBFF">NADH</th>
+<th style="padding: 10px 12px; border-bottom: 1px solid #2C3B58; font-weight: 500; text-align: right; color: #FFD27A">FADH₂</th>
+<th style="padding: 10px 0 10px 12px; border-bottom: 1px solid #2C3B58; font-weight: 500; text-align: right">CO₂</th>
+</tr></thead>
+<tbody>
+<tr><td style="padding: 12px 12px 12px 0; border-bottom: 1px solid #22304A; font-weight: 700">Glycolysis</td><td style="padding: 12px; border-bottom: 1px solid #22304A; color: #B7C3D8">Cytoplasm</td><td style="padding: 12px; border-bottom: 1px solid #22304A; text-align: right; font-family: 'JetBrains Mono', ui-monospace, monospace">2 net</td><td style="padding: 12px; border-bottom: 1px solid #22304A; text-align: right; font-family: 'JetBrains Mono', ui-monospace, monospace">2</td><td style="padding: 12px; border-bottom: 1px solid #22304A; text-align: right; font-family: 'JetBrains Mono', ui-monospace, monospace; color: #5B6A86">0</td><td style="padding: 12px 0 12px 12px; border-bottom: 1px solid #22304A; text-align: right; font-family: 'JetBrains Mono', ui-monospace, monospace; color: #5B6A86">0</td></tr>
+<tr><td style="padding: 12px 12px 12px 0; border-bottom: 1px solid #22304A; font-weight: 700">Pyruvate processing</td><td style="padding: 12px; border-bottom: 1px solid #22304A; color: #B7C3D8">Matrix</td><td style="padding: 12px; border-bottom: 1px solid #22304A; text-align: right; font-family: 'JetBrains Mono', ui-monospace, monospace; color: #5B6A86">0</td><td style="padding: 12px; border-bottom: 1px solid #22304A; text-align: right; font-family: 'JetBrains Mono', ui-monospace, monospace">2</td><td style="padding: 12px; border-bottom: 1px solid #22304A; text-align: right; font-family: 'JetBrains Mono', ui-monospace, monospace; color: #5B6A86">0</td><td style="padding: 12px 0 12px 12px; border-bottom: 1px solid #22304A; text-align: right; font-family: 'JetBrains Mono', ui-monospace, monospace">2</td></tr>
+<tr><td style="padding: 12px 12px 12px 0; border-bottom: 1px solid #22304A; font-weight: 700">Citric acid cycle</td><td style="padding: 12px; border-bottom: 1px solid #22304A; color: #B7C3D8">Matrix</td><td style="padding: 12px; border-bottom: 1px solid #22304A; text-align: right; font-family: 'JetBrains Mono', ui-monospace, monospace">2</td><td style="padding: 12px; border-bottom: 1px solid #22304A; text-align: right; font-family: 'JetBrains Mono', ui-monospace, monospace">6</td><td style="padding: 12px; border-bottom: 1px solid #22304A; text-align: right; font-family: 'JetBrains Mono', ui-monospace, monospace">2</td><td style="padding: 12px 0 12px 12px; border-bottom: 1px solid #22304A; text-align: right; font-family: 'JetBrains Mono', ui-monospace, monospace">4</td></tr>
+<tr style="font-weight: 700"><td style="padding: 12px 12px 12px 0">Total</td><td style="padding: 12px"></td><td style="padding: 12px; text-align: right; font-family: 'JetBrains Mono', ui-monospace, monospace; color: #6FF0AE">4</td><td style="padding: 12px; text-align: right; font-family: 'JetBrains Mono', ui-monospace, monospace; color: #9DBBFF">10</td><td style="padding: 12px; text-align: right; font-family: 'JetBrains Mono', ui-monospace, monospace; color: #FFD27A">2</td><td style="padding: 12px 0 12px 12px; text-align: right; font-family: 'JetBrains Mono', ui-monospace, monospace">6</td></tr>
+</tbody>
+</table>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #B7C3D8">Only 4 ATP so far. The 10 NADH and 2 FADH₂ are where the rest of the energy is waiting, and the next module shows how the electron transport chain cashes them in.</p>
+</section>
+
+<section id="n8" style="display: flex; flex-direction: column; gap: 12px; padding: 26px; border-radius: 16px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #93A2BC">SECTION 8</span>
+<h2 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.02em">Exam checklist</h2>
+<p style="margin: 0; font-size: 15px; color: #B7C3D8">You're ready when you can:</p>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.6; color: #C9D3E4">
+<li>Explain why breaking down nonpolar bonds and forming polar ones releases energy.</li>
+<li>Say which molecule is oxidized and which is reduced in a redox example, including NAD⁺ → NADH.</li>
+<li>Rank glucose, pyruvate, acetyl-CoA, NADH and ATP by how much energy they carry. (ATP is smallest.)</li>
+<li>List what goes in and what comes out of glycolysis, pyruvate processing and the citric acid cycle.</li>
+<li>Point to the stage that makes most of the electron carriers (the citric acid cycle).</li>
+<li>Name where each stage happens in a eukaryotic cell.</li>
+</ul>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; border-radius: 12px; background: rgba(255,194,61,0.08); border: 1px solid rgba(255,194,61,0.3)">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; color: #FFC23D">COMMON MIX-UP</span>
+<span style="font-size: 15px; line-height: 1.55">"Reduced" sounds like less, but a reduced molecule gained electrons and holds more energy. NADH is reduced. NAD⁺ is oxidized.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; border-radius: 12px; background: rgba(177,140,255,0.08); border: 1px solid rgba(177,140,255,0.3)">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; color: #C7AEFF">REAL WORLD</span>
+<span style="font-size: 15px; line-height: 1.55">Many tumors burn through glucose far faster than healthy tissue. PET scans use a radioactive glucose look-alike that piles up wherever cells are eating the most.</span>
+</div>
+</section>
+
+</article>
+</div>
+</sc-if>
+
+<!-- ==================== INFOGRAPHICS ==================== -->
+<sc-if value="{{show.info}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 20px">
+
+<div style="display: flex; flex-direction: column; gap: 22px; padding: 32px; border-radius: 22px; background-color: #03060C; background-image: linear-gradient(rgba(110,155,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(110,155,255,0.06) 1px, transparent 1px); background-size: 40px 40px; border: 1px solid #22304A">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.14em; color: #B18CFF">INFOGRAPHIC 1 · THE WHOLE MODULE ON ONE PAGE</span>
+<h2 style="margin: 0; font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 32px; letter-spacing: -0.03em">Glucose's journey</h2>
+</div>
+<span style="font-size: 14px; color: #93A2BC">Read top to bottom. Squares are molecules made from one glucose.</span>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 0">
+
+<div style="display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 16px">
+<div style="display: flex; flex-direction: column; align-items: center"><span style="width: 18px; height: 18px; border-radius: 50%; background: #39E58C; box-shadow: 0 0 14px #39E58C; margin-top: 18px"></span><span style="flex: 1; width: 2px; background: linear-gradient(#39E58C, #2C3B58)"></span></div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding: 14px 0 22px">
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 22px">Glucose</span><span style="font-size: 14px; color: #93A2BC">6 carbons · packed with C–H bonds</span></div>
+<span style="display: flex; gap: 4px; align-items: center"><span style="width: 16px; height: 16px; border-radius: 50%; background: #E8EEF8"></span><span style="width: 16px; height: 16px; border-radius: 50%; background: #E8EEF8"></span><span style="width: 16px; height: 16px; border-radius: 50%; background: #E8EEF8"></span><span style="width: 16px; height: 16px; border-radius: 50%; background: #E8EEF8"></span><span style="width: 16px; height: 16px; border-radius: 50%; background: #E8EEF8"></span><span style="width: 16px; height: 16px; border-radius: 50%; background: #E8EEF8"></span></span>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 16px">
+<div style="display: flex; flex-direction: column; align-items: center"><span style="flex: 1; width: 2px; background: #2C3B58"></span></div>
+<div style="display: flex; flex-direction: column; gap: 12px; padding: 18px 20px; margin-bottom: 18px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px"><span style="font-weight: 700; font-size: 18px">Glycolysis</span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; color: #6FF0AE">CYTOPLASM</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center">
+<span style="display: flex; gap: 4px; align-items: center"><span style="width: 18px; height: 18px; border-radius: 4px; background: #39E58C"></span><span style="width: 18px; height: 18px; border-radius: 4px; background: #39E58C"></span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; padding-left: 4px">2 ATP net</span></span>
+<span style="display: flex; gap: 4px; align-items: center"><span style="width: 18px; height: 18px; border-radius: 4px; background: #6E9BFF"></span><span style="width: 18px; height: 18px; border-radius: 4px; background: #6E9BFF"></span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; padding-left: 4px">2 NADH</span></span>
+</div>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 16px">
+<div style="display: flex; flex-direction: column; align-items: center"><span style="width: 14px; height: 14px; border-radius: 50%; background: #E8EEF8; margin-top: 18px"></span><span style="flex: 1; width: 2px; background: #2C3B58"></span></div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding: 14px 0 22px">
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 20px">2 Pyruvate</span><span style="font-size: 14px; color: #93A2BC">3 carbons each · still holds most of the energy</span></div>
+<span style="display: flex; gap: 4px; align-items: center"><span style="width: 16px; height: 16px; border-radius: 50%; background: #E8EEF8"></span><span style="width: 16px; height: 16px; border-radius: 50%; background: #E8EEF8"></span><span style="width: 16px; height: 16px; border-radius: 50%; background: #E8EEF8"></span><span style="width: 10px"></span><span style="width: 16px; height: 16px; border-radius: 50%; background: #E8EEF8"></span><span style="width: 16px; height: 16px; border-radius: 50%; background: #E8EEF8"></span><span style="width: 16px; height: 16px; border-radius: 50%; background: #E8EEF8"></span></span>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 16px">
+<div style="display: flex; flex-direction: column; align-items: center"><span style="flex: 1; width: 2px; background: #2C3B58"></span></div>
+<div style="display: flex; flex-direction: column; gap: 12px; padding: 18px 20px; margin-bottom: 18px; border-radius: 14px; background: #0E1524; border: 1px solid #22304A">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px"><span style="font-weight: 700; font-size: 18px">Pyruvate processing</span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; color: #9DBBFF">MITOCHONDRIAL MATRIX</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center">
+<span style="display: flex; gap: 4px; align-items: center"><span style="width: 18px; height: 18px; border-radius: 4px; background: #6E9BFF"></span><span style="width: 18px; height: 18px; border-radius: 4px; background: #6E9BFF"></span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; padding-left: 4px">2 NADH</span></span>
+<span style="display: flex; gap: 4px; align-items: center"><span style="width: 18px; height: 18px; border-radius: 50%; border: 2px solid #93A2BC; box-sizing: border-box"></span><span style="width: 18px; height: 18px; border-radius: 50%; border: 2px solid #93A2BC; box-sizing: border-box"></span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; padding-left: 4px">2 CO₂ out</span></span>
+</div>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 16px">
+<div style="display: flex; flex-direction: column; align-items: center"><span style="width: 14px; height: 14px; border-radius: 50%; background: #E8EEF8; margin-top: 18px"></span><span style="flex: 1; width: 2px; background: #2C3B58"></span></div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding: 14px 0 22px">
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 20px">2 Acetyl-CoA</span><span style="font-size: 14px; color: #93A2BC">2 carbons each, riding on coenzyme A</span></div>
+<span style="display: flex; gap: 4px; align-items: center"><span style="width: 16px; height: 16px; border-radius: 50%; background: #E8EEF8"></span><span style="width: 16px; height: 16px; border-radius: 50%; background: #E8EEF8"></span><span style="width: 10px"></span><span style="width: 16px; height: 16px; border-radius: 50%; background: #E8EEF8"></span><span style="width: 16px; height: 16px; border-radius: 50%; background: #E8EEF8"></span></span>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 16px">
+<div style="display: flex; flex-direction: column; align-items: center"><span style="flex: 1; width: 2px; background: linear-gradient(#2C3B58, #6E9BFF)"></span></div>
+<div style="display: flex; flex-direction: column; gap: 12px; padding: 18px 20px; margin-bottom: 18px; border-radius: 14px; background: #0E1524; border: 1px solid #6E9BFF; box-shadow: 0 0 40px -14px rgba(110,155,255,0.7)">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px"><span style="font-weight: 700; font-size: 18px">Citric acid cycle · 2 turns</span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; color: #9DBBFF">MITOCHONDRIAL MATRIX</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center">
+<span style="display: flex; gap: 4px; align-items: center"><span style="width: 18px; height: 18px; border-radius: 4px; background: #39E58C"></span><span style="width: 18px; height: 18px; border-radius: 4px; background: #39E58C"></span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; padding-left: 4px">2 ATP</span></span>
+<span style="display: flex; gap: 4px; align-items: center"><span style="width: 18px; height: 18px; border-radius: 4px; background: #6E9BFF"></span><span style="width: 18px; height: 18px; border-radius: 4px; background: #6E9BFF"></span><span style="width: 18px; height: 18px; border-radius: 4px; background: #6E9BFF"></span><span style="width: 18px; height: 18px; border-radius: 4px; background: #6E9BFF"></span><span style="width: 18px; height: 18px; border-radius: 4px; background: #6E9BFF"></span><span style="width: 18px; height: 18px; border-radius: 4px; background: #6E9BFF"></span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; padding-left: 4px">6 NADH</span></span>
+<span style="display: flex; gap: 4px; align-items: center"><span style="width: 18px; height: 18px; border-radius: 4px; background: #FFC23D"></span><span style="width: 18px; height: 18px; border-radius: 4px; background: #FFC23D"></span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; padding-left: 4px">2 FADH₂</span></span>
+<span style="display: flex; gap: 4px; align-items: center"><span style="width: 18px; height: 18px; border-radius: 50%; border: 2px solid #93A2BC; box-sizing: border-box"></span><span style="width: 18px; height: 18px; border-radius: 50%; border: 2px solid #93A2BC; box-sizing: border-box"></span><span style="width: 18px; height: 18px; border-radius: 50%; border: 2px solid #93A2BC; box-sizing: border-box"></span><span style="width: 18px; height: 18px; border-radius: 50%; border: 2px solid #93A2BC; box-sizing: border-box"></span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; padding-left: 4px">4 CO₂ out</span></span>
+</div>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 16px">
+<div style="display: flex; flex-direction: column; align-items: center"><span style="width: 18px; height: 18px; border-radius: 50%; border: 2px dashed #6E9BFF; box-sizing: border-box; margin-top: 14px"></span></div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 0 0">
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 20px; color: #9DBBFF">10 NADH + 2 FADH₂ → ETC</span><span style="font-size: 14px; color: #93A2BC">Cashed in at the inner membrane · next module</span></div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(460px, 100%), 1fr)); gap: 20px">
+
+<div style="display: flex; flex-direction: column; gap: 18px; padding: 28px; border-radius: 20px; background: #0B1120; border: 1px solid #22304A">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; color: #B18CFF">INFOGRAPHIC 2 · WHERE IS THE ENERGY IN FOOD?</span>
+<h3 style="margin: 0; font-weight: 700; font-size: 21px; line-height: 1.3">Evenly shared electrons are the fuel</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.55; color: #B7C3D8">Bar length is how unevenly two atoms share electrons (electronegativity difference). Short bar: lots of potential energy. Long bar: little left to give.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="display: grid; grid-template-columns: 64px minmax(0, 1fr) 44px; gap: 12px; align-items: center"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 15px">C–C</span><span style="height: 22px; border-radius: 4px; background: #141D30; position: relative"><span style="position: absolute; left: 0; top: 0; bottom: 0; width: 4px; border-radius: 4px; background: #39E58C; box-shadow: 0 0 10px #39E58C"></span></span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #B7C3D8; text-align: right">0.00</span></div>
+<div style="display: grid; grid-template-columns: 64px minmax(0, 1fr) 44px; gap: 12px; align-items: center"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 15px">C–H</span><span style="height: 22px; border-radius: 4px; background: #141D30"><span style="display: block; height: 100%; width: 28.2%; border-radius: 4px; background: #39E58C; box-shadow: 0 0 14px rgba(57,229,140,0.5)"></span></span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #B7C3D8; text-align: right">0.35</span></div>
+<div style="display: grid; grid-template-columns: 64px minmax(0, 1fr) 44px; gap: 12px; align-items: center"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 15px">C=O</span><span style="height: 22px; border-radius: 4px; background: #141D30"><span style="display: block; height: 100%; width: 71.8%; border-radius: 4px; background: #5B6A86"></span></span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #B7C3D8; text-align: right">0.89</span></div>
+<div style="display: grid; grid-template-columns: 64px minmax(0, 1fr) 44px; gap: 12px; align-items: center"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 15px">O–H</span><span style="height: 22px; border-radius: 4px; background: #141D30"><span style="display: block; height: 100%; width: 100%; border-radius: 4px; background: #5B6A86"></span></span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #B7C3D8; text-align: right">1.24</span></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); gap: 10px">
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border-radius: 12px; background: rgba(57,229,140,0.08); border: 1px solid rgba(57,229,140,0.3)"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: #6FF0AE">FUEL BONDS</span><span style="font-size: 14px">C–C and C–H in glucose and fats</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border-radius: 12px; background: rgba(147,162,188,0.08); border: 1px solid #2C3B58"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: #B7C3D8">EXHAUST BONDS</span><span style="font-size: 14px">C=O and O–H in CO₂ and H₂O</span></div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 18px; padding: 28px; border-radius: 20px; background: #0B1120; border: 1px solid #22304A">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; color: #B18CFF">INFOGRAPHIC 3 · THE CELL'S ENERGY CURRENCY</span>
+<h3 style="margin: 0; font-weight: 700; font-size: 21px; line-height: 1.3">Vault, paycheck, pocket change</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.55; color: #B7C3D8">Energy per molecule in kcal/mol, drawn to scale.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 6px"><div style="display: flex; justify-content: space-between; gap: 8px; font-size: 15px"><span style="font-weight: 700">Glucose</span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; color: #6FF0AE">686 · ≈ 94 ATP</span></div><span style="height: 28px; border-radius: 6px; background: #141D30"><span style="display: block; height: 100%; width: 100%; border-radius: 6px; background: #39E58C; box-shadow: 0 0 24px rgba(57,229,140,0.45)"></span></span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><div style="display: flex; justify-content: space-between; gap: 8px; font-size: 15px"><span style="font-weight: 700">NADH</span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; color: #9DBBFF">52.6 · ≈ 7 ATP</span></div><span style="height: 28px; border-radius: 6px; background: #141D30"><span style="display: block; height: 100%; width: 7.7%; border-radius: 6px; background: #6E9BFF; box-shadow: 0 0 16px rgba(110,155,255,0.6)"></span></span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><div style="display: flex; justify-content: space-between; gap: 8px; font-size: 15px"><span style="font-weight: 700">ATP</span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; color: #FFD27A">7.3 · 1 ATP</span></div><span style="height: 28px; border-radius: 6px; background: #141D30"><span style="display: block; height: 100%; width: 1.1%; min-width: 4px; border-radius: 6px; background: #FFC23D; box-shadow: 0 0 12px rgba(255,194,61,0.7)"></span></span></div>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.55; color: #B7C3D8">One glucose holds as much energy as about 94 ATP. Cells break it into small change because most jobs only need a little.</p>
+</div>
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 20px; padding: 28px; border-radius: 20px; background: #0B1120; border: 1px solid #22304A">
+<div style="display: flex; flex-direction: column; gap: 6px; max-width: 46em">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; color: #B18CFF">INFOGRAPHIC 4 · GLYCOLYSIS AS A BUDGET</span>
+<h3 style="margin: 0; font-weight: 700; font-size: 21px; line-height: 1.3">Spend 2 ATP to earn 4</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.55; color: #B7C3D8">One square is one molecule.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 12px; padding: 18px; border-radius: 14px; background: #121A2C; border: 1px solid #22304A"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; color: #FF8FAA">PHASE 1 · INVEST</span><span style="font-size: 14px; line-height: 1.5; color: #B7C3D8">Prime glucose with two phosphates.</span><div style="display: flex; gap: 6px; align-items: center"><span style="width: 26px; height: 26px; border-radius: 5px; border: 2px solid #FF6B8F; box-sizing: border-box"></span><span style="width: 26px; height: 26px; border-radius: 5px; border: 2px solid #FF6B8F; box-sizing: border-box"></span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; color: #FF8FAA; padding-left: 6px">−2 ATP</span></div></div>
+<div style="display: flex; flex-direction: column; gap: 12px; padding: 18px; border-radius: 14px; background: #121A2C; border: 1px solid #22304A"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; color: #B7C3D8">PHASE 2 · SPLIT</span><span style="font-size: 14px; line-height: 1.5; color: #B7C3D8">6 carbons become two sets of 3.</span><div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center"><span style="display: flex; gap: 3px"><span style="width: 12px; height: 12px; border-radius: 50%; background: #E8EEF8"></span><span style="width: 12px; height: 12px; border-radius: 50%; background: #E8EEF8"></span><span style="width: 12px; height: 12px; border-radius: 50%; background: #E8EEF8"></span><span style="width: 12px; height: 12px; border-radius: 50%; background: #E8EEF8"></span><span style="width: 12px; height: 12px; border-radius: 50%; background: #E8EEF8"></span><span style="width: 12px; height: 12px; border-radius: 50%; background: #E8EEF8"></span></span><span aria-hidden="true" style="color: #93A2BC">→</span><span style="display: flex; gap: 3px"><span style="width: 12px; height: 12px; border-radius: 50%; background: #E8EEF8"></span><span style="width: 12px; height: 12px; border-radius: 50%; background: #E8EEF8"></span><span style="width: 12px; height: 12px; border-radius: 50%; background: #E8EEF8"></span></span><span style="display: flex; gap: 3px"><span style="width: 12px; height: 12px; border-radius: 50%; background: #E8EEF8"></span><span style="width: 12px; height: 12px; border-radius: 50%; background: #E8EEF8"></span><span style="width: 12px; height: 12px; border-radius: 50%; background: #E8EEF8"></span></span></div></div>
+<div style="display: flex; flex-direction: column; gap: 12px; padding: 18px; border-radius: 14px; background: #121A2C; border: 1px solid #22304A"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; color: #6FF0AE">PHASE 3 · PAYOFF</span><span style="font-size: 14px; line-height: 1.5; color: #B7C3D8">Each half earns 2 ATP and 1 NADH.</span><div style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center"><span style="width: 26px; height: 26px; border-radius: 5px; background: #39E58C"></span><span style="width: 26px; height: 26px; border-radius: 5px; background: #39E58C"></span><span style="width: 26px; height: 26px; border-radius: 5px; background: #39E58C"></span><span style="width: 26px; height: 26px; border-radius: 5px; background: #39E58C"></span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; color: #6FF0AE; padding-left: 6px">+4 ATP</span></div><div style="display: flex; gap: 6px; align-items: center"><span style="width: 26px; height: 26px; border-radius: 5px; background: #6E9BFF"></span><span style="width: 26px; height: 26px; border-radius: 5px; background: #6E9BFF"></span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; color: #9DBBFF; padding-left: 6px">+2 NADH</span></div></div>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px; padding: 16px 18px; border-radius: 14px; background: rgba(57,229,140,0.07); border: 1px solid rgba(57,229,140,0.35)"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; color: #6FF0AE">NET PROFIT</span><span style="font-weight: 700">2 ATP · 2 NADH · 2 pyruvate</span><span style="font-size: 14px; color: #B7C3D8; flex: 1 1 260px">ATP made here comes from substrate-level phosphorylation.</span></div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 18px; padding: 28px; border-radius: 20px; background: #0B1120; border: 1px solid #22304A">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; color: #B18CFF">INFOGRAPHIC 5 · WHO MAKES THE CARRIERS?</span>
+<h3 style="margin: 0; font-weight: 700; font-size: 21px; line-height: 1.3">The citric acid cycle loads the most</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.55; color: #B7C3D8">Everything made from one glucose, one square per molecule.</p>
+</div>
+<div style="overflow-x: auto">
+<div style="min-width: 520px; display: grid; grid-template-columns: 80px repeat(3, minmax(0, 1fr)) 56px; gap: 12px 14px; align-items: center">
+<span></span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: #93A2BC">GLYCOLYSIS</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: #93A2BC">PYRUVATE PROCESSING</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: #93A2BC">CITRIC ACID CYCLE</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: #93A2BC; text-align: right">TOTAL</span>
+<span style="font-weight: 700; font-size: 14px">NADH</span>
+<span style="display: flex; gap: 3px"><span style="width: 16px; height: 16px; border-radius: 3px; background: #6E9BFF"></span><span style="width: 16px; height: 16px; border-radius: 3px; background: #6E9BFF"></span></span>
+<span style="display: flex; gap: 3px"><span style="width: 16px; height: 16px; border-radius: 3px; background: #6E9BFF"></span><span style="width: 16px; height: 16px; border-radius: 3px; background: #6E9BFF"></span></span>
+<span style="display: flex; flex-wrap: wrap; gap: 3px"><span style="width: 16px; height: 16px; border-radius: 3px; background: #6E9BFF; box-shadow: 0 0 8px rgba(110,155,255,0.7)"></span><span style="width: 16px; height: 16px; border-radius: 3px; background: #6E9BFF; box-shadow: 0 0 8px rgba(110,155,255,0.7)"></span><span style="width: 16px; height: 16px; border-radius: 3px; background: #6E9BFF; box-shadow: 0 0 8px rgba(110,155,255,0.7)"></span><span style="width: 16px; height: 16px; border-radius: 3px; background: #6E9BFF; box-shadow: 0 0 8px rgba(110,155,255,0.7)"></span><span style="width: 16px; height: 16px; border-radius: 3px; background: #6E9BFF; box-shadow: 0 0 8px rgba(110,155,255,0.7)"></span><span style="width: 16px; height: 16px; border-radius: 3px; background: #6E9BFF; box-shadow: 0 0 8px rgba(110,155,255,0.7)"></span></span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; text-align: right; color: #9DBBFF">10</span>
+<span style="font-weight: 700; font-size: 14px">FADH₂</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; color: #5B6A86">0</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; color: #5B6A86">0</span>
+<span style="display: flex; gap: 3px"><span style="width: 16px; height: 16px; border-radius: 3px; background: #FFC23D"></span><span style="width: 16px; height: 16px; border-radius: 3px; background: #FFC23D"></span></span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; text-align: right; color: #FFD27A">2</span>
+<span style="font-weight: 700; font-size: 14px">ATP</span>
+<span style="display: flex; gap: 3px"><span style="width: 16px; height: 16px; border-radius: 3px; background: #39E58C"></span><span style="width: 16px; height: 16px; border-radius: 3px; background: #39E58C"></span></span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; color: #5B6A86">0</span>
+<span style="display: flex; gap: 3px"><span style="width: 16px; height: 16px; border-radius: 3px; background: #39E58C"></span><span style="width: 16px; height: 16px; border-radius: 3px; background: #39E58C"></span></span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; text-align: right; color: #6FF0AE">4</span>
+<span style="font-weight: 700; font-size: 14px">CO₂</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; color: #5B6A86">0</span>
+<span style="display: flex; gap: 3px"><span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid #93A2BC; box-sizing: border-box"></span><span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid #93A2BC; box-sizing: border-box"></span></span>
+<span style="display: flex; gap: 3px"><span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid #93A2BC; box-sizing: border-box"></span><span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid #93A2BC; box-sizing: border-box"></span><span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid #93A2BC; box-sizing: border-box"></span><span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid #93A2BC; box-sizing: border-box"></span></span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; text-align: right; color: #B7C3D8">6</span>
+</div>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.55; padding: 12px 14px; border-radius: 12px; background: rgba(110,155,255,0.1); border: 1px solid rgba(110,155,255,0.35)">6 of the 10 NADH, and both FADH₂, come from the citric acid cycle.</p>
+</div>
+
+</div>
+</sc-if>
+
+<!-- ==================== SLIDES ==================== -->
+<sc-if value="{{show.slides}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.14em; color: #93A2BC">SLIDE DECK · CELLULAR METABOLISM</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #E8EEF8">{{slideCounter}}</span>
+</div>
+
+<div style="position: relative; aspect-ratio: 16 / 9; max-width: 100%; box-sizing: border-box; padding: 48px 56px; border-radius: 22px; overflow: hidden; display: flex; flex-direction: column; justify-content: center; gap: 22px; background-color: #03060C; background-image: radial-gradient(ellipse at 85% 15%, rgba(57,229,140,0.16), rgba(57,229,140,0) 45%), radial-gradient(ellipse at 10% 90%, rgba(110,155,255,0.16), rgba(110,155,255,0) 45%), linear-gradient(rgba(110,155,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(110,155,255,0.06) 1px, transparent 1px); background-size: auto, auto, 44px 44px, 44px 44px; border: 1px solid #22304A">
+
+<sc-if value="{{sl.s0}}" hint-placeholder-val="{{ true }}">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.14em; color: #39E58C">ENTERLABRYNTH · BIO · MODULE 2.1</span>
+<span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 60px; line-height: 1; letter-spacing: -0.035em">Cellular <span style="color: #39E58C; text-shadow: 0 0 28px rgba(57,229,140,0.45)">Metabolism</span></span>
+<span style="font-size: 22px; color: #B7C3D8; max-width: 26em">Following the electrons in one molecule of glucose</span>
+</sc-if>
+
+<sc-if value="{{sl.s1}}" hint-placeholder-val="{{ false }}">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.14em; color: #93A2BC">01 · WHERE THE ENERGY IS</span>
+<span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 40px; line-height: 1.1; letter-spacing: -0.03em">Energy lives in electrons</span>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 20px; border-radius: 16px; background: rgba(57,229,140,0.1); border: 1px solid rgba(57,229,140,0.4)"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 22px; color: #6FF0AE">C–H · C–C</span><span style="font-size: 18px; line-height: 1.45">Shared evenly. Electrons sit far from nuclei. <b>Energy-rich.</b></span></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 20px; border-radius: 16px; background: #0E1524; border: 1px solid #2C3B58"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 22px; color: #B7C3D8">O–H · C=O</span><span style="font-size: 18px; line-height: 1.45">Oxygen hogs electrons. Pulled in close. <b>Energy-poor.</b></span></div>
+</div>
+<span style="font-size: 18px; color: #B7C3D8">Respiration turns fuel bonds into exhaust bonds and keeps the difference.</span>
+</sc-if>
+
+<sc-if value="{{sl.s2}}" hint-placeholder-val="{{ false }}">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.14em; color: #93A2BC">02 · REDOX</span>
+<span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 40px; line-height: 1.1; letter-spacing: -0.03em">Energy moves with electrons</span>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<div style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; padding: 20px; border-radius: 16px; border: 1.5px solid #FF6B8F; background: #0E1524"><span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 34px; color: #FF8FAA">OIL</span><span style="font-size: 18px">Oxidation Is Loss</span></div>
+<div style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; padding: 20px; border-radius: 16px; border: 1.5px solid #6E9BFF; background: #0E1524"><span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 34px; color: #8FB0FF">RIG</span><span style="font-size: 18px">Reduction Is Gain</span></div>
+</div>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 20px; color: #E8EEF8">Glucose → NAD⁺ → … → O₂ → H₂O</span>
+</sc-if>
+
+<sc-if value="{{sl.s3}}" hint-placeholder-val="{{ false }}">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.14em; color: #93A2BC">03 · THE CARRIERS</span>
+<span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 40px; line-height: 1.1; letter-spacing: -0.03em">Vault, paycheck, pocket change</span>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="display: grid; grid-template-columns: 110px minmax(0, 1fr) 70px; gap: 14px; align-items: center"><span style="font-size: 20px; font-weight: 700">Glucose</span><span style="height: 30px; border-radius: 6px; background: #39E58C; box-shadow: 0 0 24px rgba(57,229,140,0.45)"></span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 18px; text-align: right">686</span></div>
+<div style="display: grid; grid-template-columns: 110px minmax(0, 1fr) 70px; gap: 14px; align-items: center"><span style="font-size: 20px; font-weight: 700">NADH</span><span style="height: 30px; border-radius: 6px; background: #141D30"><span style="display: block; height: 100%; width: 7.7%; border-radius: 6px; background: #6E9BFF"></span></span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 18px; text-align: right">52.6</span></div>
+<div style="display: grid; grid-template-columns: 110px minmax(0, 1fr) 70px; gap: 14px; align-items: center"><span style="font-size: 20px; font-weight: 700">ATP</span><span style="height: 30px; border-radius: 6px; background: #141D30"><span style="display: block; height: 100%; width: 1.1%; min-width: 4px; border-radius: 6px; background: #FFC23D"></span></span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 18px; text-align: right">7.3</span></div>
+</div>
+<span style="font-size: 16px; color: #93A2BC">kcal/mol, to scale</span>
+</sc-if>
+
+<sc-if value="{{sl.s4}}" hint-placeholder-val="{{ false }}">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.14em; color: #93A2BC">04 · THE ROUTE</span>
+<span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 40px; line-height: 1.1; letter-spacing: -0.03em">Four stages, two places</span>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 18px; border-radius: 14px; background: #0E1524; border: 1px solid #39E58C"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; color: #6FF0AE">CYTOPLASM</span><span style="font-size: 20px; font-weight: 700">1 · Glycolysis</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 18px; border-radius: 14px; background: #0E1524; border: 1px solid #6E9BFF"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; color: #9DBBFF">MATRIX</span><span style="font-size: 20px; font-weight: 700">2 · Pyruvate processing</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 18px; border-radius: 14px; background: #0E1524; border: 1px solid #6E9BFF"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; color: #9DBBFF">MATRIX</span><span style="font-size: 20px; font-weight: 700">3 · Citric acid cycle</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 18px; border-radius: 14px; border: 1.5px dashed #3A4A68"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; color: #93A2BC">INNER MEMBRANE</span><span style="font-size: 20px; font-weight: 700; color: #B7C3D8">4 · Oxidative phosphorylation</span></div>
+</div>
+<span style="font-size: 18px; color: #B7C3D8">This module covers stages 1 to 3. Stage 4 is next.</span>
+</sc-if>
+
+<sc-if value="{{sl.s5}}" hint-placeholder-val="{{ false }}">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.14em; color: #6FF0AE">05 · GLYCOLYSIS · CYTOPLASM</span>
+<span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 40px; line-height: 1.1; letter-spacing: -0.03em">Spend 2, earn 4</span>
+<div style="display: flex; flex-wrap: wrap; gap: 22px; align-items: center">
+<span style="display: flex; gap: 6px; align-items: center"><span style="width: 34px; height: 34px; border-radius: 6px; border: 2.5px solid #FF6B8F; box-sizing: border-box"></span><span style="width: 34px; height: 34px; border-radius: 6px; border: 2.5px solid #FF6B8F; box-sizing: border-box"></span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 20px; color: #FF8FAA; padding-left: 8px">invest</span></span>
+<span aria-hidden="true" style="font-size: 28px; color: #93A2BC">→</span>
+<span style="display: flex; gap: 6px; align-items: center"><span style="width: 34px; height: 34px; border-radius: 6px; background: #39E58C"></span><span style="width: 34px; height: 34px; border-radius: 6px; background: #39E58C"></span><span style="width: 34px; height: 34px; border-radius: 6px; background: #39E58C"></span><span style="width: 34px; height: 34px; border-radius: 6px; background: #39E58C"></span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 20px; color: #6FF0AE; padding-left: 8px">payoff</span></span>
+</div>
+<span style="font-size: 20px; line-height: 1.5">Net: <b style="color: #6FF0AE">2 ATP</b> + <b style="color: #9DBBFF">2 NADH</b> + 2 pyruvate. No oxygen needed.</span>
+</sc-if>
+
+<sc-if value="{{sl.s6}}" hint-placeholder-val="{{ false }}">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.14em; color: #9DBBFF">06 · PYRUVATE PROCESSING · MATRIX</span>
+<span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 40px; line-height: 1.1; letter-spacing: -0.03em">Trim, attach, collect</span>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center; font-size: 22px">
+<span style="padding: 12px 18px; border-radius: 12px; background: #0E1524; border: 1px solid #2C3B58">Pyruvate (3C)</span>
+<span aria-hidden="true" style="color: #93A2BC">→</span>
+<span style="padding: 12px 18px; border-radius: 12px; background: rgba(110,155,255,0.14); border: 1px solid #6E9BFF">Acetyl-CoA (2C)</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 18px; color: #B7C3D8">+ CO₂ + NADH</span>
+</div>
+<span style="font-size: 20px; line-height: 1.5; color: #B7C3D8">One carbon leaves as CO₂. Coenzyme A, made from a B vitamin, carries the rest.</span>
+</sc-if>
+
+<sc-if value="{{sl.s7}}" hint-placeholder-val="{{ false }}">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.14em; color: #9DBBFF">07 · CITRIC ACID CYCLE · MATRIX</span>
+<span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 40px; line-height: 1.1; letter-spacing: -0.03em">A carrier factory</span>
+<div style="display: flex; flex-wrap: wrap; gap: 18px; align-items: center">
+<span style="display: flex; gap: 5px; align-items: center"><span style="width: 26px; height: 26px; border-radius: 5px; background: #6E9BFF"></span><span style="width: 26px; height: 26px; border-radius: 5px; background: #6E9BFF"></span><span style="width: 26px; height: 26px; border-radius: 5px; background: #6E9BFF"></span><span style="width: 26px; height: 26px; border-radius: 5px; background: #6E9BFF"></span><span style="width: 26px; height: 26px; border-radius: 5px; background: #6E9BFF"></span><span style="width: 26px; height: 26px; border-radius: 5px; background: #6E9BFF"></span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 18px; padding-left: 6px">6 NADH</span></span>
+<span style="display: flex; gap: 5px; align-items: center"><span style="width: 26px; height: 26px; border-radius: 5px; background: #FFC23D"></span><span style="width: 26px; height: 26px; border-radius: 5px; background: #FFC23D"></span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 18px; padding-left: 6px">2 FADH₂</span></span>
+<span style="display: flex; gap: 5px; align-items: center"><span style="width: 26px; height: 26px; border-radius: 5px; background: #39E58C"></span><span style="width: 26px; height: 26px; border-radius: 5px; background: #39E58C"></span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 18px; padding-left: 6px">2 ATP</span></span>
+</div>
+<span style="font-size: 20px; line-height: 1.5; color: #B7C3D8">Two turns per glucose. The last 4 carbons leave as CO₂.</span>
+</sc-if>
+
+<sc-if value="{{sl.s8}}" hint-placeholder-val="{{ false }}">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.14em; color: #93A2BC">08 · SCORECARD PER GLUCOSE</span>
+<span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 40px; line-height: 1.1; letter-spacing: -0.03em">What we have so far</span>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr)); gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 18px; border-radius: 14px; background: #0E1524; border: 1px solid #39E58C"><span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 44px; color: #6FF0AE">4</span><span style="font-size: 18px">ATP</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 18px; border-radius: 14px; background: #0E1524; border: 1px solid #6E9BFF"><span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 44px; color: #9DBBFF">10</span><span style="font-size: 18px">NADH</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 18px; border-radius: 14px; background: #0E1524; border: 1px solid #FFC23D"><span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 44px; color: #FFD27A">2</span><span style="font-size: 18px">FADH₂</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 18px; border-radius: 14px; background: #0E1524; border: 1px solid #3A4A68"><span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 44px; color: #B7C3D8">6</span><span style="font-size: 18px">CO₂</span></div>
+</div>
+<span style="font-size: 20px; line-height: 1.5; color: #B7C3D8">Most of the energy is still waiting inside those carriers.</span>
+</sc-if>
+
+<sc-if value="{{sl.s9}}" hint-placeholder-val="{{ false }}">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.14em; color: #39E58C">09 · UP NEXT</span>
+<span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 44px; line-height: 1.05; letter-spacing: -0.03em">Cashing in the carriers</span>
+<span style="font-size: 22px; line-height: 1.5; color: #B7C3D8; max-width: 30em">Module 02: fermentation and the electron transport chain, where NADH and FADH₂ hand their electrons to oxygen and most of the ATP gets made.</span>
+</sc-if>
+
+</div>
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+<button type="button" onClick="{{prevSlide}}" style="min-height: 48px; padding: 0 22px; border-radius: 10px; border: 1.5px solid #3A4A68; background: transparent; color: #E8EEF8; font-weight: 700; font-size: 15px">Previous</button>
+<div style="display: flex; flex-wrap: wrap; gap: 2px; justify-content: center">
+<sc-for list="{{dots}}" as="d" hint-placeholder-count="10">
+<button type="button" aria-label="{{d.label}}" onClick="{{d.go}}" style="display: flex; align-items: center; justify-content: center; min-width: 28px; min-height: 32px; padding: 0; border: none; background: transparent"><span style="display: block; width: {{d.w}}; height: 8px; border-radius: 999px; background: {{d.bg}}"></span></button>
+</sc-for>
+</div>
+<button type="button" onClick="{{nextSlide}}" style="min-height: 48px; padding: 0 22px; border-radius: 10px; border: none; background: #39E58C; color: #04140B; font-weight: 700; font-size: 15px">Next slide</button>
+</div>
+</div>
+</sc-if>
+
+<!-- ==================== QUIZ ==================== -->
+<sc-if value="{{show.quiz}}" hint-placeholder-val="{{ false }}">
+<div style="max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.14em; color: #FF8FAA">QUIZ CARDS</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; color: #93A2BC">{{counter}}</span>
+</div>
+<div style="min-height: 280px; display: flex; flex-direction: column; justify-content: center; gap: 14px; padding: 36px; border-radius: 20px; background: #141D30; border: 1px solid {{cardBorder}}; box-shadow: {{cardGlow}}">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #93A2BC">{{sideLabel}}</span>
+<span style="font-size: 24px; line-height: 1.45; font-weight: 700; color: #E8EEF8">{{cardText}}</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<button type="button" onClick="{{flip}}" style="flex: 1 1 160px; min-height: 50px; border-radius: 10px; border: none; background: #FF6B8F; color: #1A0710; font-weight: 700; font-size: 16px">{{flipLabel}}</button>
+<button type="button" onClick="{{next}}" style="flex: 1 1 120px; min-height: 50px; border-radius: 10px; border: 1.5px solid #3A4A68; background: transparent; color: #E8EEF8; font-weight: 700; font-size: 16px">Next card</button>
+</div>
+</div>
+</sc-if>
+
+<!-- ==================== VIDEO ==================== -->
+<sc-if value="{{show.video}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<a href="https://www.youtube.com/@enterlabrynth" style="position: relative; display: flex; align-items: center; justify-content: center; aspect-ratio: 16 / 9; max-width: 100%; border-radius: 20px; overflow: hidden; text-decoration: none; background-color: #03060C; background-image: radial-gradient(ellipse at 30% 40%, rgba(57,229,140,0.22), rgba(57,229,140,0) 45%), radial-gradient(ellipse at 72% 62%, rgba(110,155,255,0.22), rgba(110,155,255,0) 40%); border: 1px solid #22304A">
+<span style="display: flex; flex-direction: column; align-items: center; gap: 14px">
+<span class="br-pulse" style="display: flex; align-items: center; justify-content: center; width: 84px; height: 84px; border-radius: 50%; background: #39E58C; color: #04140B; box-shadow: 0 0 50px rgba(57,229,140,0.55)"><svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></span>
+<span style="font-weight: 700; font-size: 16px">Watch the video walkthroughs on YouTube</span>
+</span>
+</a>
+<span style="font-size: 14px; color: #93A2BC">Opens the EnterLabrynth channel on YouTube.</span>
+</div>
+</sc-if>
+
+<!-- ==================== PODCAST ==================== -->
+<sc-if value="{{show.podcast}}" hint-placeholder-val="{{ false }}">
+<div style="max-width: 760px; display: flex; flex-direction: column; gap: 18px; padding: 28px; border-radius: 20px; background: #0E1524; border: 1px solid #22304A">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #8FB0FF">PODCAST · EPISODE 01</span>
+<span style="font-family: 'Unbounded', 'Atkinson Hyperlegible', sans-serif; font-weight: 800; font-size: 26px; letter-spacing: -0.02em">Following the electrons in your lunch</span>
+<span style="font-size: 15px; color: #93A2BC">[Your Audio Overview from Gemini Notebook]</span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="display: inline-flex; align-items: center; min-height: 46px; padding: 0 18px; border-radius: 999px; border: 1.5px dashed #3A4A68; color: #B7C3D8; font-weight: 700; font-size: 15px">Podcast on Spotify · [link needed]</span>
+</div>
+</div>
+</sc-if>
+
+</div>
+
+<nav aria-label="Module navigation" style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; padding-block: 24px 56px; border-top: 1px solid #22304A">
+<a href="molecular-cellular.html" style="display: inline-flex; align-items: center; gap: 8px; min-height: 46px; text-decoration: none; font-weight: 700; font-size: 15px">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"></path><path d="M11 6l-6 6 6 6"></path></svg>All Molecular &amp; Cellular Biology</a>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; color: #93A2BC">NEXT · MODULE 2.2</span>
+<span style="font-size: 15px; color: #B7C3D8">Fermentation &amp; the Electron Transport Chain · soon</span>
+</div>
+</nav>
+
+</div>
+</div>
+</template>
+<script src="assets/dc-lite.js"></script>
+<script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { tab: 'notes', i: 0, flipped: false, slide: 0 };
+    this.slideCount = 10;
+    this.cards = [
+      { q: 'Which bond holds more usable energy: C–H or O–H?', a: 'C–H. Its electrons are shared almost evenly, so they sit far from either nucleus with lots of potential energy. In O–H, oxygen pulls them in close.' },
+      { q: 'NAD⁺ picks up two electrons and a proton. Was it oxidized or reduced?', a: 'Reduced. It gained electrons (RIG) and became energy-rich NADH.' },
+      { q: 'Glycolysis makes 4 ATP. Why is the net only 2?', a: 'The cell spent 2 ATP up front in the investment phase to prime glucose before splitting it.' },
+      { q: 'How is ATP made during glycolysis?', a: 'Substrate-level phosphorylation: an enzyme transfers a phosphate directly from a sugar molecule onto ADP.' },
+      { q: 'Rank by energy per molecule: ATP, glucose, NADH.', a: 'Glucose (686) > NADH (52.6) > ATP (7.3), in kcal/mol.' },
+      { q: 'What happens to pyruvate when it enters the mitochondrion?', a: 'It loses one carbon as CO₂, the 2-carbon remainder joins coenzyme A to form acetyl-CoA, and 1 NADH is made.' },
+      { q: 'Where do glucose’s 6 carbons end up?', a: 'All as CO₂: 2 leave during pyruvate processing and 4 in the citric acid cycle.' },
+      { q: 'Which stage makes the most NADH per glucose?', a: 'The citric acid cycle, with 6 of the 10. It also makes both FADH₂.' },
+      { q: 'In respiration, what is the first electron donor and the last electron acceptor?', a: 'Glucose donates first. Oxygen accepts last and becomes water.' }
+    ];
+  }
+  tabStyle(name) {
+    const on = this.state.tab === name;
+    return on
+      ? { bg: '#39E58C', fg: '#04140B', border: '#39E58C' }
+      : { bg: 'transparent', fg: '#E8EEF8', border: '#22304A' };
+  }
+  renderVals() {
+    const tab = this.state.tab;
+    const n = this.cards.length;
+    const i = this.state.i;
+    const flipped = this.state.flipped;
+    const card = this.cards[i];
+    const s = this.state.slide;
+    const S = this.slideCount;
+    const names = ['notes', 'info', 'slides', 'quiz', 'video', 'podcast'];
+    const tb = {}; const go = {}; const show = {};
+    names.forEach((nm) => {
+      tb[nm] = this.tabStyle(nm);
+      go[nm] = () => this.setState({ tab: nm });
+      show[nm] = tab === nm;
+    });
+    const sl = {};
+    for (let k = 0; k < S; k++) sl['s' + k] = s === k;
+    const dots = [];
+    for (let k = 0; k < S; k++) {
+      dots.push({
+        label: 'Go to slide ' + (k + 1),
+        w: k === s ? '24px' : '8px',
+        bg: k === s ? '#39E58C' : '#3A4A68',
+        go: () => this.setState({ slide: k })
+      });
+    }
+    return {
+      tb, go, show, sl, dots,
+      slideCounter: (s + 1) + ' / ' + S,
+      prevSlide: () => this.setState({ slide: (s - 1 + S) % S }),
+      nextSlide: () => this.setState({ slide: (s + 1) % S }),
+      counter: (i + 1) + ' / ' + n,
+      sideLabel: flipped ? 'ANSWER' : 'QUESTION',
+      cardText: flipped ? card.a : card.q,
+      flipLabel: flipped ? 'Show question' : 'Flip card',
+      cardBorder: flipped ? '#FF6B8F' : '#2C3B58',
+      cardGlow: flipped ? '0 0 40px -12px rgba(255,107,143,0.6)' : 'none',
+      flip: () => this.setState({ flipped: !flipped }),
+      next: () => this.setState({ i: (i + 1) % n, flipped: false })
+    };
+  }
+}
+DCLite.mount(Component);
+</script>
+</body>
+</html>
