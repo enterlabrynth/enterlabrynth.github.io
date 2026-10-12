@@ -21,6 +21,19 @@ button:focus-visible,a:focus-visible{outline:2px solid #39E58C;outline-offset:2p
 .br-pulse{animation:br-pulse 3.5s ease-in-out infinite}
 @media (prefers-reduced-motion: reduce){.br-pulse{animation:none}}
 </style>
+<style>
+.tc-i{position:absolute;opacity:0;pointer-events:none}
+.tc-l,.mt-fab{display:none}
+@media (max-width:760px){
+.mtab-bar{position:static!important;margin-bottom:14px!important}
+.tc-l{display:flex;align-items:center;gap:10px;min-height:50px;padding:0 16px;margin-bottom:18px;border-radius:14px;border:1px solid #22304A;background:#0B1120;color:#E8EEF8;font-weight:700;font-size:15px;cursor:pointer}
+.tc-l:after{content:'Show';margin-left:auto;padding:5px 12px;border-radius:999px;border:1.5px solid #8FB0FF;color:#B8C8FF;font-size:13px}
+.tc-i:checked+.tc-l:after{content:'Hide'}
+.tc-i:focus-visible+.tc-l{outline:2px solid #FFFFFF;outline-offset:2px}
+.tc-i:not(:checked)+.tc-l+nav,.tc-i:not(:checked)+.tc-l+p,.tc-i:not(:checked)+.tc-l+p+nav{display:none!important}
+.mt-fab.on{display:inline-flex;position:fixed;right:14px;bottom:14px;z-index:40;align-items:center;gap:7px;min-height:44px;padding:0 15px;border-radius:999px;background:rgba(14,21,36,0.94);border:1.5px solid #39E58C;color:#8FF2C0;font-weight:700;font-size:13.5px;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,0.5)}
+}
+</style>
 <style>html{height:100%;background:#070B14}body{min-height:100%}#dc-root{min-height:100vh}</style>
 </head>
 <body>
