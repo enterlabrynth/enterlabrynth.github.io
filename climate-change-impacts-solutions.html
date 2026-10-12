@@ -50,6 +50,24 @@ a:focus-visible,summary:focus-visible{outline:2px solid #39E58C;outline-offset:2
 .pk.step:not(:has(>.pk-r:checked))>.pk-fig .s.s1,.pk>.pk-r:nth-of-type(1):checked~.pk-fig .s.s1,.pk>.pk-r:nth-of-type(2):checked~.pk-fig .s.s2,.pk>.pk-r:nth-of-type(3):checked~.pk-fig .s.s3,.pk>.pk-r:nth-of-type(4):checked~.pk-fig .s.s4,.pk>.pk-r:nth-of-type(5):checked~.pk-fig .s.s5,.pk>.pk-r:nth-of-type(6):checked~.pk-fig .s.s6,.pk>.pk-r:nth-of-type(7):checked~.pk-fig .s.s7,.pk>.pk-r:nth-of-type(8):checked~.pk-fig .s.s8{display:block}
 .pk-n{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 16px;border-radius:10px;background:#39E58C;color:#04140B;font-weight:700;font-size:14.5px;cursor:pointer}
 .pk-n.alt{background:transparent;color:#E8EEF8;border:1.5px solid #3A4A68}
+@keyframes pk-pulse{0%,100%{box-shadow:0 0 0 0 rgba(232,238,248,0)}50%{box-shadow:0 0 0 5px rgba(232,238,248,0.22)}}
+.pk:not(.step):not(:has(>.pk-r:checked)) .pk-l,.pk.step:not(:has(>.pk-r:checked)) .pk-n{animation:pk-pulse 1.7s ease-in-out infinite}
+.pk-l{transition:transform .12s ease}.pk-bar .pk-l:hover{transform:translateY(-2px)}
+.pk-hint{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;padding:6px 12px;border-radius:999px;background:rgba(57,229,140,0.12);border:1px solid rgba(57,229,140,0.5);color:#8FF2C0;font-weight:700;font-size:13.5px;line-height:1.3}
+.pk-hint svg{flex:none}
+.pk:not(.step):has(>.pk-r:checked) .pk-hint{opacity:0.55}
+@media (prefers-reduced-motion: reduce){.pk-l,.pk-n{animation:none!important}}
+.pts{position:relative;display:flex;flex-direction:column}
+.pt-r{position:absolute;opacity:0;pointer-events:none}
+.pt-bar{position:sticky;top:0;z-index:15;display:grid;gap:8px;padding:10px 0 12px;margin-bottom:18px;background:#070B14;border-bottom:1px solid #22304A}
+.pt-l{display:flex;flex-direction:column;justify-content:center;gap:3px;min-height:58px;padding:8px 14px;border-radius:14px;border:1.5px solid #22304A;background:#0E1524;cursor:pointer}
+.pt-l:hover{border-color:#5A6C8E}
+.pt-l>b{font-size:clamp(12.5px,3.1vw,16px);line-height:1.25;color:#E8EEF8}
+.pt-p{display:none}
+.pts:not(:has(>.pt-r:checked))>.pt-panels>.pt-p:nth-child(1),.pt-r:nth-of-type(1):checked~.pt-panels>.pt-p:nth-child(1),.pt-r:nth-of-type(2):checked~.pt-panels>.pt-p:nth-child(2),.pt-r:nth-of-type(3):checked~.pt-panels>.pt-p:nth-child(3),.pt-r:nth-of-type(4):checked~.pt-panels>.pt-p:nth-child(4){display:block}
+.pts:not(:has(>.pt-r:checked))>.pt-bar>.pt-l:nth-child(1),.pt-r:nth-of-type(1):checked~.pt-bar>.pt-l:nth-child(1),.pt-r:nth-of-type(2):checked~.pt-bar>.pt-l:nth-child(2),.pt-r:nth-of-type(3):checked~.pt-bar>.pt-l:nth-child(3),.pt-r:nth-of-type(4):checked~.pt-bar>.pt-l:nth-child(4){border-color:currentColor;background:#16213A;box-shadow:inset 0 -3px 0 currentColor}
+.pt-r:nth-of-type(1):focus-visible~.pt-bar>.pt-l:nth-child(1),.pt-r:nth-of-type(2):focus-visible~.pt-bar>.pt-l:nth-child(2),.pt-r:nth-of-type(3):focus-visible~.pt-bar>.pt-l:nth-child(3),.pt-r:nth-of-type(4):focus-visible~.pt-bar>.pt-l:nth-child(4){outline:2px solid #FFFFFF;outline-offset:2px}
+.pt-next{display:inline-flex;align-items:center;gap:10px;min-height:50px;padding:0 22px;border-radius:12px;background:#39E58C;color:#04140B;font-weight:700;font-size:16px;cursor:pointer}
 .el-flow.slow{animation-duration:3.6s}
 @keyframes el-draw{0%{stroke-dashoffset:100}55%,100%{stroke-dashoffset:0}}
 .el-draw{stroke-dasharray:100;animation:el-draw 6s ease-out infinite}
@@ -193,6 +211,7 @@ a:focus-visible,summary:focus-visible{outline:2px solid #39E58C;outline-offset:2
 <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #93A2BC">INTERACTIVE · THE SAME OCEAN, COOLER AND WARMER</span>
 <h3 style="margin: 0; font-weight: 700; font-size: 19px; line-height: 1.3">What stratification does</h3>
 <div class="pk step" id="str"><input class="pk-r" type="radio" name="str" id="str-1" aria-label="Cooler ocean"><input class="pk-r" type="radio" name="str" id="str-2" aria-label="Warmer ocean">
+<span class="pk-hint"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11V5a1.6 1.6 0 0 1 3.2 0v5"></path><path d="M12.2 10V8.4a1.6 1.6 0 0 1 3.2 0V11"></path><path d="M15.4 11v-.6a1.6 1.6 0 0 1 3.2 0V15a6 6 0 0 1-6 6h-1.2a5.6 5.6 0 0 1-4.6-2.4L4 14.6a1.6 1.6 0 0 1 2.6-1.8L9 15"></path></svg>Tap the buttons, or Next step, to click through all 2</span>
 <div class="pk-bar"><label class="pk-l l1" for="str-1" style="color: #6E9BFF"><span>Cooler ocean</span></label><label class="pk-l l2" for="str-2" style="color: #FF6B8F"><span>Warmer ocean</span></label></div>
 <div class="pk-fig">
 <svg viewBox="0 0 400 240" role="img" aria-label="The ocean in two states. In a cooler ocean, water mixes between the surface and the deep, carrying nutrients up to the sunlit surface, where many phytoplankton grow. In a warmer ocean, a warm light layer sits on top, mixing stops, the nutrients stay in the deep water, and few phytoplankton grow." style="display: block; width: 100%; height: auto; border-radius: 10px">
@@ -294,6 +313,7 @@ a:focus-visible,summary:focus-visible{outline:2px solid #39E58C;outline-offset:2
 <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #93A2BC">INTERACTIVE · MOVE, ADJUST, OR NEITHER</span>
 <h3 style="margin: 0; font-weight: 700; font-size: 19px; line-height: 1.3">The three responses, and what each one needs</h3>
 <div class="pk" id="rsp"><input class="pk-r" type="radio" name="rsp" id="rsp-1" aria-label="Move"><input class="pk-r" type="radio" name="rsp" id="rsp-2" aria-label="Stay and adjust"><input class="pk-r" type="radio" name="rsp" id="rsp-3" aria-label="Neither">
+<span class="pk-hint"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11V5a1.6 1.6 0 0 1 3.2 0v5"></path><path d="M12.2 10V8.4a1.6 1.6 0 0 1 3.2 0V11"></path><path d="M15.4 11v-.6a1.6 1.6 0 0 1 3.2 0V15a6 6 0 0 1-6 6h-1.2a5.6 5.6 0 0 1-4.6-2.4L4 14.6a1.6 1.6 0 0 1 2.6-1.8L9 15"></path></svg>Tap a button to explore</span>
 <div class="pk-bar"><label class="pk-l l1" for="rsp-1" style="color: #39E58C"><span>Move</span></label><label class="pk-l l2" for="rsp-2" style="color: #FFC23D"><span>Stay and adjust</span></label><label class="pk-l l3" for="rsp-3" style="color: #93A2BC"><span>Neither</span></label></div>
 <div class="pk-fig">
 <svg viewBox="0 0 400 170" role="img" aria-label="Three small scenes side by side. In the first, dots move from a warm patch to a cooler one. In the second, a dot stays where it is and changes colour. In the third, a dot is crossed out." style="display: block; width: 100%; height: auto; border-radius: 10px">
@@ -346,6 +366,7 @@ a:focus-visible,summary:focus-visible{outline:2px solid #39E58C;outline-offset:2
 <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; color: #93A2BC">INTERACTIVE · DATA · NEW GUINEA BIRDS, 1965 VS. 2012</span>
 <h3 style="margin: 0; font-weight: 700; font-size: 19px; line-height: 1.3">Change in each species' upper elevation limit</h3>
 <div class="pk" id="brd"><input class="pk-r" type="radio" name="brd" id="brd-1" aria-label="Low"><input class="pk-r" type="radio" name="brd" id="brd-2" aria-label="Middle"><input class="pk-r" type="radio" name="brd" id="brd-3" aria-label="High">
+<span class="pk-hint"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11V5a1.6 1.6 0 0 1 3.2 0v5"></path><path d="M12.2 10V8.4a1.6 1.6 0 0 1 3.2 0V11"></path><path d="M15.4 11v-.6a1.6 1.6 0 0 1 3.2 0V15a6 6 0 0 1-6 6h-1.2a5.6 5.6 0 0 1-4.6-2.4L4 14.6a1.6 1.6 0 0 1 2.6-1.8L9 15"></path></svg>Tap the labels on the picture</span>
 
 <div class="pk-fig">
 <svg viewBox="0 0 400 214" role="img" aria-label="Scatter plot. Each dot is one bird species. Across the bottom is the highest elevation it lived at in 1965. Up the side is how much that upper limit changed by 2012. Most dots are above the zero line. The dots on the left, low-elevation species, reach much higher than the dots on the right." style="display: block; width: 100%; height: auto; border-radius: 10px">
